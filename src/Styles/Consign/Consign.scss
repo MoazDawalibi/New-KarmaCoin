@@ -1,0 +1,166 @@
+.title_container{
+        width: 100%;
+        background: #e7ecf2;
+        padding-block: 60px;
+        @include Flex ;
+        flex-direction: column;
+    .text{
+        width: 30%;
+        font-size: 20px;
+        border: none !important;
+        margin-block: 20px;
+        text-align: center;
+    }
+    .title{
+        font-size: 50px;
+        border-bottom: 1px solid var(--primary);
+        font-weight: normal;
+        text-align: center;
+        width: 22vw;
+        color: var(--primary);
+        padding-bottom: 10px;
+    }
+}
+
+.body_contact{
+    padding-block: 30px;
+    width: 90%;
+    margin-inline: auto;
+    display: flex; align-items: start; justify-content: space-between;
+
+    .form_container{
+        width: 32%;
+        p{
+            width: 100%;
+            font-size: 30px;
+            color: var(--primary);
+            text-align: center;
+        }
+        .KarimField{
+            width: 100%;
+            display: flex;
+            margin-block: 10px;
+            .upload{
+                width: 100%;
+                .partner_image{
+                border-radius: 3px !important;
+                border: 1px solid rgba(0,0,0,0.3);
+                    color: var(--primary);
+                }
+            }
+        }
+    }
+    .messages{
+        width: 32%;
+        p{
+            width: 100%;
+            font-size: 30px;
+            color: var(--primary);
+            text-align: center;
+        }
+        .form{
+            width: 100%;
+            .consign_input{
+                border-radius: 2px;
+                border: 2px solid rgba(0,0,0,0.3);
+                color: var(--primary);
+                opacity: .5;
+            }
+            .button_container{
+                display: flex;justify-content: end;align-items: end;
+            }
+            .button{
+                width: 30%;
+                padding: 10px 0;
+                background: var(--primary);
+                border: none;
+                border-radius: 3px;
+            }
+        }
+    }
+    .consign_contact{
+        width: 30%;
+        display: flex; flex-direction: column;
+        .title{ 
+            width: 100%;
+            font-size: 30px;
+            color: var(--primary);
+            text-align: center;
+        }
+        .p{
+            width: 80%;
+            margin-inline: auto;
+            font-size: 20px;
+            font-weight: bold;
+            color: var(--primary);
+            span{
+                font-weight: normal;
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+
+:where(.css-dev-only-do-not-override-i1mju1).ant-upload-wrapper .ant-upload-list.ant-upload-list-picture .ant-upload-list-item{
+    padding: 80px 20px !important;
+}
+:where(.css-dev-only-do-not-override-i1mju1).ant-upload-wrapper .ant-upload-list.ant-upload-list-picture .ant-upload-list-item, :where(.css-dev-only-do-not-override-i1mju1).ant-upload-wrapper .ant-upload-list.ant-upload-list-picture-card .ant-upload-list-item, :where(.css-dev-only-do-not-override-i1mju1).ant-upload-wrapper .ant-upload-list.ant-upload-list-picture-circle .ant-upload-list-item{
+    border-radius: 2px !important;
+    border: 2px solid rgba(0,0,0,0.3);
+}
+
+:where(.css-dev-only-do-not-override-i1mju1).ant-upload-wrapper .ant-upload-list.ant-upload-list-picture .ant-upload-list-item .ant-upload-list-item-thumbnail .anticon, :where(.css-dev-only-do-not-override-i1mju1).ant-upload-wrapper .ant-upload-list.ant-upload-list-picture-card .ant-upload-list-item .ant-upload-list-item-thumbnail .anticon, :where(.css-dev-only-do-not-override-i1mju1).ant-upload-wrapper .ant-upload-list.ant-upload-list-picture-circle .ant-upload-list-item .ant-upload-list-item-thumbnail .anticon{
+    color:rgba(0,0,0,0.3) !important;
+}
+
+
+
+@media screen and (max-width:1000px) {
+    
+    .title_container{
+        .text{
+            width: 50%;
+        }
+        .title{
+            width: 50vw;
+        }
+    }
+    
+    .body_contact{
+        width: 94%;
+        align-items: center; 
+        flex-direction: column;
+        .form_container , .messages, .consign_contact {
+            margin-block: 20px;
+            width: 80%;
+        }
+        
+    .messages{
+        .form{
+            .button{
+                width: 100%;
+            }
+        }
+    }
+        .consign_contact{
+            .p{
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:700px) {
+    
+    .title_container{
+        .text{
+            width: 70%;
+        }
+        .title{
+            font-size: 40px;
+            width: 65vw;
+        }
+    }
+}

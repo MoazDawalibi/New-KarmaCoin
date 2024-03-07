@@ -1,0 +1,87 @@
+.AboutHome{
+    display: flex; flex-direction: column; justify-content: center;align-items: center;
+    width: 45%;
+    margin-inline: auto;
+    margin-block: 40px;
+    h1, p, .link{
+        color: var(--primary);
+        text-align: center !important;
+    }
+    h1{
+        font-size: 50px;
+        font-weight: normal;
+        border-bottom:1px solid var(--primary);
+        margin-bottom: 20px;
+    }
+    p{
+        font-size: 20px;
+    }
+    p:nth-child(4){
+        font-weight: 700 !important; 
+    }
+    .link{
+        font-weight: normal;
+         font-size: 20px;
+         border-bottom: 2px solid  var(--primary);
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .AboutHome{
+        display: flex; flex-direction: column; justify-content: center;align-items: center;
+        width: 80%;
+        margin-inline: auto;
+        margin-block: 40px;
+        h1, p, .link{
+            color: var(--primary);
+            text-align: center !important;
+        }
+        h1{
+            font-size: 50px;
+            font-weight: normal;
+            border-bottom:1px solid var(--primary);
+            margin-bottom: 20px;
+        }
+        p{
+            font-size: 20px;
+        }
+        p:nth-child(4){
+            font-weight: 700 !important; 
+        }
+        .link{
+            font-weight: normal;
+             font-size: 20px;
+             border-bottom: 2px solid  var(--primary);
+        }
+    }   
+}
+
+@media screen and (max-width:600px) {
+    .AboutHome{
+        display: flex; flex-direction: column; justify-content: center;align-items: center;
+        width: 80%;
+        margin-inline: auto;
+        margin-block: 40px;
+        h1, p, .link{
+            color: var(--primary);
+            text-align: center !important;
+        }
+        h1{
+            font-size: 30px;
+            font-weight: normal;
+            border-bottom:1px solid var(--primary);
+            margin-bottom: 20px;
+        }
+        p{
+            font-size: 14px;
+        }
+        p:nth-child(4){
+            font-weight: 700 !important; 
+        }
+        .link{
+            font-weight: normal;
+             font-size: 14px;
+             border-bottom: 2px solid  var(--primary);
+        }
+    }   
+}

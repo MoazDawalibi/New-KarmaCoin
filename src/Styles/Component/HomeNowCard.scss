@@ -1,0 +1,118 @@
+.HomeNowCard{
+    display: flex; flex-direction: column;justify-content: space-around;
+    width: 48%;
+    margin-inline: auto;
+    background: #e7ecf2;
+    padding: 20px 20px;
+    h1{
+        color: var(--primary);
+        font-size: 40px;
+        font-weight: normal;
+    }
+    p{
+        font-size: 25px;
+        color: var(--primary);
+    }
+    div{
+        display: flex;justify-content: end;align-items: end;
+        .link{
+            text-align: center;
+            padding: 10px;
+            font-size: 20px;
+            background: var(--primary);
+            color: var(--white);
+        }
+    }
+}
+
+
+@media screen and (max-width:1000px) {
+    .HomeNowCard{
+    display: flex; flex-direction: column;justify-content: space-around;
+    width: 48%;
+    margin-inline: auto;
+    background: #e7ecf2;
+    padding: 20px 20px;
+    h1{
+        color: var(--primary);
+        font-size: 40px;
+        font-weight: normal;
+    }
+    p{
+        font-size: 25px;
+        color: var(--primary);
+    }
+    div{
+        display: flex;justify-content: end;align-items: end;
+        .link{
+            text-align: center;
+            padding: 10px;
+            font-size: 20px;
+            background: var(--primary);
+            color: var(--white);
+        }
+    }
+}
+}
+
+@media screen and (max-width:650px) {
+    .HomeNowCard{
+        margin-block: 10px;
+
+    display: flex; flex-direction: column;justify-content: space-around;
+    width: 90%;
+    margin-inline: auto;
+    background: #e7ecf2;
+    padding: 20px 20px;
+    h1{
+        color: var(--primary);
+        font-size: 40px;
+        font-weight: normal;
+    }
+    p{
+        font-size: 25px;
+        color: var(--primary);
+    }
+    div{
+        display: flex;justify-content: end;align-items: end;
+        .link{
+            text-align: center;
+            padding: 10px;
+            font-size: 20px;
+            background: var(--primary);
+            color: var(--white);
+        }
+    }
+}
+}
+
+@media screen and (max-width:400px) {
+    .HomeNowCard{
+        margin-block: 10px;
+
+    display: flex; flex-direction: column;justify-content: space-around;
+    width: 90%;
+    margin-inline: auto;
+    background: #e7ecf2;
+    padding: 20px 20px;
+    h1{
+        color: var(--primary);
+        font-size: 25px;
+        font-weight: normal;
+    }
+    p{
+        font-size: 15px;
+        color: var(--primary);
+    }
+    div{
+        display: flex;justify-content: end;align-items: end;
+        .link{
+            text-align: center;
+            padding: 10px;
+            font-size: 10px;
+            background: var(--primary);
+            color: var(--white);
+        }
+    }
+}
+}

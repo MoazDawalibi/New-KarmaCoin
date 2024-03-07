@@ -1,0 +1,96 @@
+@import url(https://db.onlinewebfonts.com/c/86afd37ffc5fe0a2116beebc1c57326a?family=Sagona+Book);
+
+
+html,body {
+    background: var(--bg);
+    font-family: "Sagona Book";
+
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: inherit;
+    font-weight: bold;
+    text-decoration: none !important;
+    cursor: pointer;
+    
+
+}
+
+button,
+svg {
+    cursor: pointer;
+}
+
+
+
+.not_foound_page{
+    background: black;
+    height: 100vh;
+    display: flex;justify-content: center;align-items:center;
+
+
+    p{
+        color: white;
+        display: inline;
+    
+    }
+    h6{
+        display: inline;
+        margin-inline:20px;
+        height: 140px !important;
+        
+        width: 20px;
+    }
+    .container-not-found{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        div{
+            display: flex;justify-content: center;align-items: center;
+
+        }
+        button{
+            border: none;
+            outline: none;
+            padding: 8px;
+            border-radius: 10px;
+
+            margin-inline:30px;
+        }
+    }
+}
+
+.Flex{
+    display: flex;
+}
+
+
+:where(.css-dev-only-do-not-override-i1mju1).ant-btn.ant-btn-icon-only{
+    &:hover{
+        // background: ;
+    }
+}
+
+.ReviewBody{
+    :where(.css-dev-only-do-not-override-i1mju1).ant-btn-primary:not(:disabled):not(.ant-btn-disabled){
+        width: 30%;
+    }
+    @media screen and (max-width:500px) {
+        :where(.css-dev-only-do-not-override-i1mju1).ant-btn-primary:not(:disabled):not(.ant-btn-disabled){
+            width: 50%;
+        }
+    }
+}
+
+
+.point_container{
+    // background: #000;
+    .point{
+        display: none !important;
+    }
+}

@@ -1,0 +1,24 @@
+:root {
+    --primary: #1c3352;
+    --secondary : #96bbeb;
+    --text: black;
+    --bg: #fafafa;
+    --bg2:  #f8f8f8;
+    --bg3:#24436b;
+    --shadow: rgba(0, 0, 0, 0.15);
+    --gray : rgb(207, 210, 214);
+    --white:#fff;
+}
+
+:root:has(.dark) {
+    --primary: #7a987c;     
+    --secondary: #ffd12e;   
+    --text: #ffffff;        
+    --bg: #1f1f1f;          
+    --bg2: #2c2c2c;         
+    --shadow: rgba(255, 255, 255, 0.15); 
+    --gray: #a0aec0;  
+
+
+
+}

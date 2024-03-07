@@ -1,0 +1,119 @@
+.ContactCard{
+    width: 50%;
+    background: #e7ecf2;
+    padding: 25px 80px;
+    display: flex;justify-content: start;align-items: center;
+    border-right:solid 1px #c5ced9;
+    .left{
+        width: 60%;
+        h1{
+            font-size: 40px;
+            color: var(--primary);
+            text-transform: capitalize;
+            font-weight: normal !important;
+        }
+        p{
+            font-size: 20px;
+            color: var(--primary);
+        }
+    }
+    .right{
+        width: 28%;
+        background: var(--primary);
+        text-align: center;
+        padding: 12px;
+        .link{
+            color: var(--white);
+            font-size: 20px;
+            font-weight: normal;
+            // width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .ContactCard{
+        width: 50%;
+        background: #e7ecf2;
+        padding: 25px 20px;
+        display: flex;justify-content: start;align-items: center;
+        border-right:solid 1px #c5ced9;
+        .left{
+            width: 60%;
+            h1{
+                font-size: 30px;
+                color: var(--primary);
+                text-transform: capitalize;
+                font-weight: normal !important;
+            }
+            p{
+                font-size: 15px;
+                color: var(--primary);
+            }
+        }
+        .right{
+            width: 40%;
+            background: var(--primary);
+            text-align: center;
+            padding: 12px;
+            .link{
+                color: var(--white);
+                font-size: 15px;
+                font-weight: normal;
+            }
+        }
+    }
+}
+@media screen and (max-width:900px) {
+    .ContactCard{
+        .right{
+            display: block !important;
+        }
+    }
+
+}
+
+@media screen and (max-width:650px) {
+    .ContactCard{
+        width: 60%;
+        margin-inline: auto;
+        margin-block: 30px;
+        background: #e7ecf2;
+        padding: 30px 20px 80px 20px;
+        display: flex;justify-content: center;align-items: center; flex-direction: column;
+        border:solid 1px #c5ced9;
+        .left{
+            display: flex;justify-content: start;align-items: center;  flex-direction: column;
+            width: 90%;
+            h1{
+                font-size: 30px;
+                color: var(--primary);
+                text-transform: capitalize;
+                font-weight: normal !important;
+            }
+            p{
+                font-size: 15px;
+                color: var(--primary);
+            }
+        }
+        .right{
+            margin-inline: auto;
+            transform: translateY(20px);
+            width: 80%;
+            background: var(--primary);
+            padding-left: 10px;
+            padding: 5px;
+            .link{
+                color: var(--white);
+                font-size: 15px;
+                font-weight: normal;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:400px) {
+    .ContactCard{
+        width: 80%;
+    }
+}

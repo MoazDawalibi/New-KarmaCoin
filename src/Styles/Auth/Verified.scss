@@ -1,0 +1,144 @@
+
+.Virefied{
+    display: flex;justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    .ant-btn {
+        &:hover{
+            background: #fafafa !important;
+        }
+    }
+    .ReactCodeInput{
+
+        width: 100% !important;
+    }
+    p{
+        color: red;
+        font-size: 12px;
+        font-weight: bold;
+    }
+    span{
+        font-size: 12px;
+        opacity: .4;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .button_container{
+        width: 100%;
+        display: flex;justify-content: center;align-items: center;
+        .verify_button{
+            width: 135px;
+            height: 50px;
+            border: 2px solid #fff;
+            border-radius: 10px;
+            color: #fff;
+            background: var(--primary);
+            text-align: center;
+            font-size: 20px;
+            &:hover{
+                transform: scale(1.05);
+                transition: ease-in-out .4s;
+            }
+        }
+    }
+    
+}
+
+
+.ReviewBody{
+    display: flex;
+    justify-content: center;align-items: center;
+    width: 100%;
+    margin-inline: auto;
+    gap: 2vw;
+    margin-block: 48px;
+    .link{
+        display: flex;justify-content: center;align-items: center;
+        width: 100% !important;
+        margin-inline: auto;
+        .button{
+            width: 100%;
+            background: var(--primary);
+        }
+    }
+  .ant-btn-primary {
+    width: 40%;
+    padding: 20px 50px;
+}
+
+}
+
+/* Ant result title */
+.ReviewBody .ant-result-success .ant-result-title{
+ color: var(--text);
+ font-size: 51px;
+}
+
+/* Ant result subtitle */
+.ReviewBody .ant-result-success .ant-result-subtitle{
+ color: var(--text);
+ font-size: 21px;
+ opacity: .7;
+}
+
+@media screen and (max-width:850px) {
+    .ReviewBody{
+        margin-block: 89px;
+    
+    }
+}
+@media screen and (max-width:700px) {
+    .ReviewBody{
+        margin-block: 80px;
+    }    
+    .ReviewBody .ant-result-success .ant-result-title{
+     font-size: 42px;
+    }
+    .ReviewBody .ant-result-success .ant-result-subtitle{
+     font-size: 14px;
+    }
+    
+}
+
+
+@media screen and (max-width:500px) {
+    .Virefied{
+        .Result{
+            .ant-result-extra{
+                .ReactCodeInput{
+                    .styles_react-code-input__CRulA{
+                        input{
+                            width: 40px !important;
+                        } 
+                    }
+                }
+            }
+        }
+    }
+
+        
+    .ReviewBody .ant-result-success .ant-result-title{
+        font-size:28px;
+       }
+       .ReviewBody .ant-result-success .ant-result-subtitle{
+        font-size: 12px;
+       }
+}
+
+.ar{
+    .styles_react-code-input__CRulA > input:first-child{
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 6px;
+        border-right: solid 1px #a8adb7;
+    }
+    .styles_react-code-input__CRulA > input:last-child{
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+        border-top-left-radius: 6px;
+        border-bottom-left-radius: 6px;
+    }
+}

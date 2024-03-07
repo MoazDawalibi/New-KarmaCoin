@@ -1,0 +1,41 @@
+.AboutPage{
+    display: flex;justify-content: center;align-items: center; flex-direction: column;
+    width: 100%;
+    .title_container{
+        width: 100%;
+        background: #e7ecf2;
+        padding-block: 60px;
+        @include Flex
+    }
+    h1{
+        font-size: 50px;
+        border-bottom: 1px solid var(--primary);
+        font-weight: normal;
+        text-align: center;
+        width: 15vw;
+        color: var(--primary);
+    }
+    .description{
+        padding-block: 121px;
+        font-size: 20px;
+        width: 60%;
+        margin-inline: auto;
+        text-align: center;
+    }
+}
+
+
+@media screen and (max-width:800px) {
+    .AboutPage{
+        h1{
+            width: 35vw;
+        }
+    }
+}
+@media screen and (max-width:500px) {
+    .AboutPage{
+        h1{
+            width: 50vw;
+        }
+    }
+}
