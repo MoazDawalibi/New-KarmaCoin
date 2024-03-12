@@ -229,9 +229,6 @@
 // background: var(--primary);
 padding: 0 24px;
 }
-:where(.css-dev-only-do-not-override-i1mju1).ant-drawer .ant-drawer-header {
-display: none;    
-}
 .menuButton{
     border: 1px solid #fff;
     @include Shadow;

@@ -75,6 +75,9 @@ svg {
         // background: ;
     }
 }
+.ant-drawer-header{
+    display: none !important;
+}
 
 .ReviewBody{
     :where(.css-dev-only-do-not-override-i1mju1).ant-btn-primary:not(:disabled):not(.ant-btn-disabled){
