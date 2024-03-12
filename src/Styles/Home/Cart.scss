@@ -31,7 +31,7 @@
     width: 100%;
     :where(.css-dev-only-do-not-override-i1mju1).ant-btn-dashed:not(:disabled):not(.ant-btn-disabled){
         width: 96%;
-        margin-right: 5px;
+        margin-inline: 5px;
     }
     :where(.css-dev-only-do-not-override-i1mju1).ant-btn-primary{
         width: 96% !important;
@@ -433,6 +433,7 @@
          }
     }
     .CartItem{
+
         strong{
             font-size: 10px;
         }
@@ -462,6 +463,7 @@
         flex-direction: column;
     }
     .CartBody{
+        padding: 0px 2vw;
         flex-direction: column;
     }
     .ant-steps-label-horizontal .ant-steps-item .ant-steps-item-title{
@@ -472,8 +474,9 @@
        .ant-steps-label-horizontal .ant-steps-item .ant-steps-item-description{
         font-size: 10px;
        }
-       
-       
+       .CartItem .ant-card-body{
+        padding: 20px 0 !important;
+    }  
 }
 
 
@@ -528,8 +531,11 @@
 }
 
 @media screen and (max-width: 460px) {
-    
+    .CartItem{
+    padding: 10px !important;
+    }
     .CartBody{
+        padding: 0  1px !important;
         .Cart_Img{
             img{
                 width: 20vw;
@@ -539,7 +545,7 @@
     }
     .ant-card-body{display: flex;  width: 100%; padding: 20px 10px !important;    display: flex; align-items: center;  gap: 20px;  }
     .Cart_Info{
-        width: 36vw;
+        width: 25vw;
         span{
             h6{
                 margin-bottom: 0 !important;
@@ -555,7 +561,7 @@
 .ar{
     .CartItem{
         width: 100%;
-        padding: 20px;
+        padding: 10px;
         
         strong{
             color: var(--primary);
@@ -677,7 +683,7 @@
     }
     .ant-card-body{display: flex;  width: 100%; padding: 20px 10px !important;    display: flex; align-items: center;  gap: 20px;  }
     .Cart_Info{
-        width: 36vw;
+        // width: 30vw !important;
         span{
             h6{
                 margin-bottom: 0 !important;

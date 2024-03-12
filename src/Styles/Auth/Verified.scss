@@ -64,8 +64,9 @@
         }
     }
   .ant-btn-primary {
-    width: 40%;
-    padding: 20px 50px;
+    display: flex;justify-content: center;align-items: center;
+    width: 20% !important;
+    padding: 20px 50px !important;
 }
 
 }

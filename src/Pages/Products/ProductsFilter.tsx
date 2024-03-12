@@ -36,7 +36,7 @@ const CategoriesArry = data?.data?.data?.map((item: any) => ({
   label: item?.category_translations[0]?.name,
 }));
 
-CategoriesArry?.push({ value: 'all', label: 'all' });
+CategoriesArry?.push({ value: 'all', label: t('All') });
 
 useEffect(() => {
   

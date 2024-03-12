@@ -15,7 +15,7 @@
                height: 300px;
                mix-blend-mode: multiply;
                object-fit: contain;
-               margin-right: 2vw;
+               margin-inline: 2vw;
            }
    }
    .Product_Right{
@@ -107,7 +107,7 @@
                // height: 200px;
                mix-blend-mode: multiply;
                object-fit: contain;
-               margin-right: 0 !important;
+               margin-inline: 0 !important;
                margin-bottom: 2vw;
            }
    }

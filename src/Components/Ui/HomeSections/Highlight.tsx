@@ -4,9 +4,7 @@ import { IoIosFlash } from 'react-icons/io'
 import { MdOutlineArrowBackIos, MdArrowForwardIos } from "react-icons/md";
 
 const Highlight= (data:any ) => {
-  // const {  href, count, icon } = data
-  const TitleProps = { title:"Highlight", href:"/products?is_highlight=true", count:"", icon:<IoIosFlash/> }
-    
+  
   if (data?.data?.length > 0) {
     return (
 

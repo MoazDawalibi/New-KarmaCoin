@@ -116,7 +116,11 @@ const Register = () => {
               />
             </div>
             <div className='button_container'>
-              <LoadingButton isLoading={isLoading} >{t("Register")} <MdKeyboardDoubleArrowRight/></LoadingButton >
+              {
+                isLoading 
+                ?<LoadingButton isLoading={isLoading} ></LoadingButton >
+                :<LoadingButton>{t("Register")} <MdKeyboardDoubleArrowRight/></LoadingButton>
+              }
             </div>
           </Form>
         </Formik>

@@ -9,6 +9,7 @@ import ContactImage from './ContactImage';
 import { FiPhone } from "react-icons/fi";
 import { CiMail } from "react-icons/ci";
 import { MdKeyboardDoubleArrowRight } from 'react-icons/md';
+import { Divider } from 'antd';
 
 const Contact = () => {
   const form = useRef<any>(null);
@@ -63,23 +64,23 @@ const Contact = () => {
         <div className='info_container'>
           <div className='address'>
             {/* <h1>Address</h1> */}
-            <p>location-location</p>
-            <p>location-location</p>
+            <p className='infoArabic'>location-location</p>
+            <p className='infoArabic'>location-location</p>
 
           </div>
 
           <div className='numbers'>
-            <p><FiPhone/>+963 958 261 912</p>
+            <p className='infoArabic'><FiPhone/>963 958 261 912</p>
             {/* <p><FiPhone/>numbers</p> */}
-            <p><CiMail/>mail@mail.com</p>
+            <p className='infoArabic'><CiMail/>mail@mail.com</p>
           </div>
 
           <div className='second_number'>
-            <p>VAT Number: CHE-394.131.510</p>
+            <p className='infoArabic'>VAT Number: CHE-394.131.510</p>
           </div>
         </div>
       </div>
-
+      <Divider className='contact_divider'/> 
       <div className="Contact_section" id="ContactMe">
       <div>
         <h1>{t('contactUs.title')}</h1>

@@ -21,6 +21,11 @@
          font-size: 3.5vw;
       }
    }
+   .ar{
+      .ProductSection{
+         flex-direction: row-reverse !important;
+      }
+   }
 
  .CardSwiper{
    z-index: 0 !important;
@@ -115,7 +120,7 @@
                         // border-radius: 10%;
                         // text-align: end;
                         margin-bottom: -3px;
-                        height: 30px; width: 30px; @include Flex;
+                        height:  28px; width:  28px; @include Flex;
                         svg{
                            color: var(--primary);
                            font-size: 15px;
@@ -354,10 +359,10 @@
                     .AddProduct{
                         border: 1px solid var(--primary);
                         // border-radius: 10%;
-                        height: 20px; width: 20px; @include Flex;
+                        height: 19px; width: 19px; @include Flex;
                         svg{
                            color: var(--primary);
-
+                           font-size: 10px;
                         }
                      }
             }

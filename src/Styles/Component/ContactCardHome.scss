@@ -1,7 +1,8 @@
+
 .ContactCard{
     width: 50%;
     background: #e7ecf2;
-    padding: 25px 80px;
+    padding: 25px 50px;
     display: flex;justify-content: start;align-items: center;
     border-right:solid 1px #c5ced9;
     .left{
@@ -18,15 +19,14 @@
         }
     }
     .right{
-        width: 28%;
+        width: 37%;
         background: var(--primary);
         text-align: center;
-        padding: 12px;
+        padding: 10px;
         .link{
             color: var(--white);
             font-size: 20px;
             font-weight: normal;
-            // width: 100%;
         }
     }
 }
@@ -55,7 +55,7 @@
             width: 40%;
             background: var(--primary);
             text-align: center;
-            padding: 12px;
+            padding: 10px;
             .link{
                 color: var(--white);
                 font-size: 15px;
@@ -64,13 +64,13 @@
         }
     }
 }
+
 @media screen and (max-width:900px) {
     .ContactCard{
         .right{
             display: block !important;
         }
     }
-
 }
 
 @media screen and (max-width:650px) {
@@ -102,10 +102,10 @@
             width: 80%;
             background: var(--primary);
             padding-left: 10px;
-            padding: 5px;
+            padding:8px 1px;
             .link{
                 color: var(--white);
-                font-size: 15px;
+                font-size: 18px;
                 font-weight: normal;
             }
         }

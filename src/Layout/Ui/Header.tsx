@@ -20,10 +20,17 @@ import { useGetCart } from '../../api/cart';
 import { toast } from 'react-toastify';
 
 const Header = (handleRegisterClick: any) => {
+
+  const { isAuthenticated } = useSelector((state: any) => state.auth)
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isDrawer, setIsDrawer] = useState(true);
+  const [Scrolled, setScrolled] = useState(false);
+  
   const Navigate = useNavigate()
   const { mutate, isSuccess, isLoading, data, status, isError, error } = useLogin()
   const dispatch = useDispatch()
   const { data: Cart } = useGetCart()
+  const { t } = useTranslation();
 
   const handelSubmit = (values: any) => {
     mutate({
@@ -33,27 +40,29 @@ const Header = (handleRegisterClick: any) => {
   }
 
   useEffect(() => {
-    console.log(data);
     if (isSuccess) {
       dispatch(login((data as any)?.data))
       Navigate('/', { replace: true })
-    // toast.success(t("Logged in successfully"))
     }
     else if ((error as any)?.response?.status == 510) {
-      // console.log("error 510");
-      // toast.error(t("Please verify your email"))
       Navigate('/verified')
     }
 
   }, [isSuccess, Navigate, dispatch, data, error])
-  const { t } = useTranslation();
-
-  const { isAuthenticated } = useSelector((state: any) => state.auth)
-
-
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isDrawer, setIsDrawer] = useState(true);
-
+  
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []); // Empty array as the second argument to run only on mount and unmount
 
   const showModal = () => {
     setIsModalOpen(true);
@@ -77,23 +86,6 @@ const Header = (handleRegisterClick: any) => {
       toast.error(t('Failed To login'))
     }
   }
-  const [Scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 100) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-
-
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []); // Empty array as the second argument to run only on mount and unmount
 
 
   return (
@@ -105,13 +97,9 @@ const Header = (handleRegisterClick: any) => {
       <div className='right'>
         <div className='topLinks'>
           <Link className='link' to={"/cart"}><ShoppingCartOutlined /> {t("cart")} {isAuthenticated ? Cart?.data?.at(0)?.cart_items_count : ""} </Link>
-          {isAuthenticated ?
-            <Link className='link' to={"/register"}>{t("Register")}</Link> : ""}
-          <div className='link2'
-            onClick={(() => (
-              setIsModalOpen(true)
-            ))}
-          >
+          {isAuthenticated ? "":
+            <Link className='link' to={"/register"}>{t("Register")}</Link> }
+          <div className='link2' onClick={() => showModal()}>
             {
               isAuthenticated ? (
                 <div onClick={() => {
@@ -142,13 +130,11 @@ const Header = (handleRegisterClick: any) => {
           <Link to={"/cart"}> <div><ShoppingCartOutlined/><span className='cart_count'>  {isAuthenticated?Cart?.data?.at(0)?.cart_items_count :""}</span>
           <span className='cart_count countArabic'>1  {isAuthenticated?Cart?.data?.at(0)?.cart_items_count :""}</span>
           </div></Link>
-
         </div> */}
     <div className='CartBadge'>
-      
-    <Badge count={Cart?.data?.at(0)?.cart_items_count}>
+      <Badge count={Cart?.data?.at(0)?.cart_items_count}>
         <ShoppingCartOutlined size={150} />
-             </Badge>
+      </Badge>
     </div>
 
 
@@ -174,7 +160,7 @@ const Header = (handleRegisterClick: any) => {
               {/* <Link className='link'  to={"/cart"}><ShoppingCartOutlined/> {t("Cart")}</Link> */}
               <Link className='link' to={"/register"}>{t("Register")}</Link>
               {/* /login */}
-              <span className='link2' onClick={(() => (setIsModalOpen(true)))}>
+              <span className='link2' onClick={() => showModal()}>
                   {/* {t("Login")} */}
                   {
               isAuthenticated ? (
@@ -212,25 +198,23 @@ const Header = (handleRegisterClick: any) => {
           onOk={handleOk}
           onCancel={handleCancel}
           centered
-          footer={[
-            <></>
-          ]}
-        >
+          footer={[]}
+          >
           <Form >
             <div className="LoginModel">
               <div className='LoginModel_Left'>
                 <h1>{t("You Are Not Logged in")} </h1>
                 <div className="form">
                   <div className='login_dev'>
-                    {/* <label>{t("Email")}</label> */}
+                    <label>{t("Email")}</label>
                     <Field className="input" name="email" type="email" placeholder="Email" />
                   </div>
 
                   <div className='login_dev'>
-                    {/* <label>{t("Password")}</label> */}
+                    <label>{t("Password")}</label>
                     <Field className="input" name="password" type="password" placeholder="Password" />
                   </div>
-                  <button onClick={(() => { handleSubmitLogin() })}>{isLoading ? t("loading...") : t("Login")}</button>
+                  <button onClick={()=>handleSubmitLogin() }>{isLoading ? t("loading...") : t("Login")}</button>
                 </div>
               </div>
               <div className='LoginModel_Right'>
@@ -241,7 +225,6 @@ const Header = (handleRegisterClick: any) => {
                 <button onClick={(() => {
                   Navigate('/register')
                 })}>
-                  {/* {isLoading?t("loading..."): "register"} */}
                   {t("Register")}
                 </button>
               </div>

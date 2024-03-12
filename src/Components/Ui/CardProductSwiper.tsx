@@ -19,7 +19,6 @@ import { GiTwoCoins } from "react-icons/gi";
 const CardProduct = ({ itemSwiper }:any) => {
     
   const [loading, resetLoading] = useLoadingState(true, 2000);
-  console.log(itemSwiper);
   
   const navigate = useNavigate()
     const {isAuthenticated} = useAuth()
@@ -34,15 +33,6 @@ const CardProduct = ({ itemSwiper }:any) => {
             <Skeleton className='unset' loading={loading} active >
                     <div key={itemSwiper?.id} className='Card_Productt'>
 
-              {/* <div className='Card_Product_Top' onClick={()=>navigate(`/product/${itemSwiper.id}`)}> */}
-                {/* <span className='Left'>{itemSwiper?.category?.category_translations?.at(0)?.name}</span> */}
-                {/* <span className='Right'>
-               <Link to={`/product/${itemSwiper.id}`}>
-                  <EyeFilled className='SingleOrder_icon' />
-                </Link>
-                </span> */}
-              {/* </div> */}
-
               <div className='Card_Product_Mid' onClick={()=>navigate(`/product/${itemSwiper.id}`)}>
                 <img src={ BaseURL_IMAGE +itemSwiper?.product_main_image|| UserImageURL} onError={useImageError} alt={itemSwiper?.name} width="100%" height="60%" />
               </div>
@@ -50,7 +40,6 @@ const CardProduct = ({ itemSwiper }:any) => {
                 <div className='product_name' onClick={()=>navigate(`/product/${itemSwiper.id}`)}>
                     {/* {itemSwiper?.product_translations?.at(0)?.name} */}
                     {itemSwiper?.category?.category_translations?.at(0)?.name}
-                    {/* شمة */}
                     </div>
 
                 <span>

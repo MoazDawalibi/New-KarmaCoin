@@ -1,7 +1,6 @@
 import {lazy, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom'
 import Loading from './Components/Utils/Loading/Loading';
-import Auth from './Pages/Auth/Page';
 import Page from './Pages/Home/Home';
 import About from './Pages/About/About';
 import Contact from './Pages/Contact/Contact';
@@ -14,7 +13,7 @@ import Products from './Pages/Products/Products';
 import LoadingPage from './Pages/Loading/LoadingPage';
 import SuccessVerify from './Pages/Auth/SuccessVerify';
 import SingleOrderPage from './Pages/SingleOrder/SingleOrder';
-// import { Product } from './Pages/Products/Product';
+
 const Page404 = lazy(() => import("./Layout/Ui/NotFoundPage"))
 const Product = lazy(() => import("./Pages/Products/Product"))
 const SuccessPayment = lazy(() => import("./Pages/SuccessPayment/SuccessPayment"))
@@ -42,10 +41,6 @@ const App = () => {
       <Route path="/cart" element={<Suspense fallback={<LoadingPage />}> <Cart/></Suspense>} />
       <Route path="/checkout_payment_online" element={<Suspense fallback={<LoadingPage />}> <CheckPaymentPage /></Suspense>} />
       <Route path="/success_payment" element={<Suspense fallback={<LoadingPage />}> <SuccessPayment /></Suspense>} />
-
-      <Route path="/" element={<Suspense fallback={<LoadingPage />}> <Page /></Suspense>} />
-
-
 
     </Routes>
 

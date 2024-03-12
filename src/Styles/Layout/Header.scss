@@ -478,7 +478,10 @@ display: none;
                     // display: none;
                     width: 100%;
                     // padding: 12px;
-                    @include Shadow;    
+                    @include Shadow;  
+                    label{
+                        font-weight: bolder;
+                    }  
                     .input{
                     padding: 12px;
                         background: white;
