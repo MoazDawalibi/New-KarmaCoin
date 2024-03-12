@@ -139,6 +139,9 @@
         .bottomLinks{
             .links{
                 display: flex;
+                .Icon{
+                    display: none ;
+                }
                 p{   
                     .Link{
                         text-align: end;
@@ -252,14 +255,21 @@ padding: 0 24px;
         font-size: 25px;
         color: #fff;
         &:hover{
-            // background: #000;
             color: #fff !important;
         }
     }
 }
 
 @media screen and (max-width: 850px) {
+
     .DrawerLinks{
+        .oneLink_container{
+            @include underLineText(var(--primary), var(--secondary));
+            padding-bottom: 2px;
+            svg{
+                color: var(--primary);
+            }
+        }
         P{
             a{
                 color: #000 !important;

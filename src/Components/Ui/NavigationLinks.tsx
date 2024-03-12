@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { TbPointFilled } from "react-icons/tb";
+
 //@ts-ignore
 interface NavLink {
   label: string;
@@ -32,9 +34,12 @@ export const NavigationLinks = ({ className }: any) => {
       {links.map((link, index) => (
         <p key={index} className={`oneLink ${location.pathname}${location.hash}` === link.to ? 'active' : ''}>
           {
-            <Link className='Link' to={link.to}>
-              {link.label}
-            </Link>
+            <span className='oneLink_container'>
+              <TbPointFilled className='Icon'/>
+              <Link className='Link' to={link.to}>
+                {link.label}
+              </Link>
+            </span>
           }
         </p>
       ))}

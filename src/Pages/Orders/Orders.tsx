@@ -17,15 +17,15 @@ const Orders = () => {
     return <LoadingPage/>
   }
   if(isError){
-    // return <NotFoundPage/>
+    return <NotFoundPage/>
   }
   
   return (
     <Layout className='Orders'>
       <div className='title_container'><h1>{t("Orders")}</h1></div>
-     <div className='form'>
-      <OrdersForm data={data}/>
-     </div>
+      <div className='form'>
+        <OrdersForm data={data}/>
+      </div>
     </Layout>
   )
 }
