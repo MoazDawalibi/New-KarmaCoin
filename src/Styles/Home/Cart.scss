@@ -15,6 +15,9 @@
     padding: 3px 25px 3px 25px ;
     transform: translateY(5px);
 }
+:where(.css-dev-only-do-not-override-i1mju1).ant-badge .ant-badge-count, :where(.css-dev-only-do-not-override-i1mju1).ant-badge .ant-badge-dot, :where(.css-dev-only-do-not-override-i1mju1).ant-badge .ant-scroll-number-custom-component{
+        transform: translate(15%, -50%) !important;
+}
 :where(.css-dev-only-do-not-override-i1mju1).ant-btn-primary:not(:disabled):not(.ant-btn-disabled):hover{
     background: var(--primary) !important;
 }
