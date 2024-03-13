@@ -19,7 +19,6 @@ const AuthSlice = createSlice({
         state.isAuthenticated = false
     },
     register :(state , action) =>{
-        // console.log(action?.payload);
         state.user = action.payload?.user
         authStorage.storeUser(action.payload?.user)
 
@@ -30,7 +29,6 @@ const AuthSlice = createSlice({
     },
 
     login :(state , action) =>{
-      // console.log(action?.payload);
       state.user = action.payload?.user
       authStorage.storeUser(action.payload?.user)
 

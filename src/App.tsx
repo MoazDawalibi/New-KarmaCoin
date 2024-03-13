@@ -1,19 +1,19 @@
 import {lazy, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom'
-import Loading from './Components/Utils/Loading/Loading';
-import Page from './Pages/Home/Home';
-import About from './Pages/About/About';
-import Contact from './Pages/Contact/Contact';
-import Consigne from './Pages/Consigne/Consigne';
-import Register from './Pages/Auth/Register';
-import Verify from './Pages/Auth/Verify';
-import Orders from './Pages/Orders/Orders';
-import Cart from './Pages/Cart/Cart';
-import Products from './Pages/Products/Products';
 import LoadingPage from './Pages/Loading/LoadingPage';
-import SuccessVerify from './Pages/Auth/SuccessVerify';
-import SingleOrderPage from './Pages/SingleOrder/SingleOrder';
 
+
+const Page = lazy(() => import("./Pages/Home/Home"))
+const About = lazy(() => import("./Pages/About/About"))
+const Contact = lazy(() => import("./Pages/Contact/Contact"))
+const Consigne = lazy(() => import("./Pages/Consigne/Consigne"))
+const Register = lazy(() => import("./Pages/Auth/Register"))
+const Verify = lazy(() => import("./Pages/Auth/Verify"))
+const Orders = lazy(() => import("./Pages/Orders/Orders"))
+const Cart = lazy(() => import("./Pages/Cart/Cart"))
+const Products = lazy(() => import("./Pages/Products/Products"))
+const SuccessVerify = lazy(() => import("./Pages/Auth/SuccessVerify"))
+const SingleOrderPage = lazy(() => import("./Pages/SingleOrder/SingleOrder"))
 const Page404 = lazy(() => import("./Layout/Ui/NotFoundPage"))
 const Product = lazy(() => import("./Pages/Products/Product"))
 const SuccessPayment = lazy(() => import("./Pages/SuccessPayment/SuccessPayment"))
@@ -22,7 +22,6 @@ const CheckPaymentPage = lazy(() => import("./Pages/paymentRedirect/Page"))
 
 const App = () => {
 
-  
   return (
     <Routes>
       <Route path="*" element={<Suspense fallback={<LoadingPage />}> <Page404 /></Suspense>} />

@@ -4,10 +4,9 @@ import { Tchildren } from '../Layout/app/Types'
 
 function ReduxT({ children }: Tchildren) {
   return (
-      <Provider store={store}>
-    {children}
-      </Provider>
-
+    <Provider store={store}>
+      {children}
+    </Provider>
   )
 }
 

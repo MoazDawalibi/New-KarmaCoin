@@ -15,6 +15,9 @@ const Contact = () => {
   const form = useRef<any>(null);
   const { t } = useTranslation();
   const {mutate , isSuccess,isLoading} = useSendMessage()
+  const [Name , setName] = useState('') 
+  const [Email , setEmail] = useState('') 
+  const [Message , setMessage] = useState('') 
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -22,10 +25,8 @@ const Contact = () => {
     if (form.current) {
       emailjs.sendForm('service_49y5tqk', 'template_w4976q5', form.current, 'ivQFaIMbNe3DbNhA0')
         .then((result:any) => {
-          // console.log(result.text);
           form.current.reset();
-          toast.success(t('contact.emailSentSuccess'));
-        })
+          toast.success(t('contact.emailSentSuccess'));})
         .catch((error:any) => {
           console.log(error.text);
         });
@@ -42,9 +43,6 @@ const Contact = () => {
     })
   };
 
-  const [Name , setName] = useState('') 
-  const [Email , setEmail] = useState('') 
-  const [Message , setMessage] = useState('') 
 
   useEffect(()=>{
     if(isSuccess){
@@ -62,53 +60,54 @@ const Contact = () => {
       <div className='contact_info'>
         <p className='title'>{t("Addresses")}</p>
         <div className='info_container'>
-          <div className='address'>
-            {/* <h1>Address</h1> */}
-            <p className='infoArabic'>location-location</p>
-            <p className='infoArabic'>location-location</p>
 
+          <div className='address'>
+            <p className='infoArabic'>location-location</p>
+            <p className='infoArabic'>location-location</p>
           </div>
 
           <div className='numbers'>
             <p className='infoArabic'><FiPhone/>963 958 261 912</p>
-            {/* <p><FiPhone/>numbers</p> */}
             <p className='infoArabic'><CiMail/>mail@mail.com</p>
           </div>
 
           <div className='second_number'>
             <p className='infoArabic'>VAT Number: CHE-394.131.510</p>
           </div>
+          
         </div>
       </div>
+
       <Divider className='contact_divider'/> 
+
       <div className="Contact_section" id="ContactMe">
-      <div>
-        <h1>{t('contactUs.title')}</h1>
-        <p>{t('contactUs.sendYourMessage')}</p>
-        <ContactImage />
+        <div>
+          <h1>{t('contactUs.title')}</h1>
+          <p>{t('contactUs.sendYourMessage')}</p>
+          <ContactImage />
+        </div>
+        <div>
+          <Form ref={form} onSubmit={sendEmail}>
+            <Form.Group controlId="formName">
+              <Form.Label>{t('contactUs.name')}</Form.Label>
+              <Form.Control className='contact_input' type="text" name="to_name" placeholder={t('contactUs.enterYourName')} value={Name} onChange={(e)=>setName(e.target.value)} />
+            </Form.Group>
+            <Form.Group controlId="formEmail">
+              <Form.Label>{t('contactUs.email')}</Form.Label>
+              <Form.Control className='contact_input' type="email" name="from_name" placeholder={t('contactUs.enterYourEmail')} value={Email} onChange={(e)=>setEmail(e.target.value)}/>
+            </Form.Group>
+            <Form.Group controlId="formMessage">
+              <Form.Label>{t('contactUs.message')}</Form.Label>
+              <Form.Control className='contact_input' as="textarea" rows={4} name="message" placeholder={t('contactUs.typeYourMessage')}value={Message} onChange={(e)=>setMessage(e.target.value)} />
+            </Form.Group>
+            <div className='button_container'>
+              <Button className='mt-4 button' type="submit">
+                {isLoading? t("loading...") :<span>{t('contactUs.submit')}<MdKeyboardDoubleArrowRight/></span>}
+              </Button>
+            </div>
+          </Form>
+        </div>
       </div>
-      <div>
-        <Form ref={form} onSubmit={sendEmail}>
-          <Form.Group controlId="formName">
-            <Form.Label>{t('contactUs.name')}</Form.Label>
-            <Form.Control className='contact_input' type="text" name="to_name" placeholder={t('contactUs.enterYourName')} value={Name} onChange={(e)=>setName(e.target.value)} />
-          </Form.Group>
-          <Form.Group controlId="formEmail">
-            <Form.Label>{t('contactUs.email')}</Form.Label>
-            <Form.Control className='contact_input' type="email" name="from_name" placeholder={t('contactUs.enterYourEmail')} value={Email} onChange={(e)=>setEmail(e.target.value)}/>
-          </Form.Group>
-          <Form.Group controlId="formMessage">
-            <Form.Label>{t('contactUs.message')}</Form.Label>
-            <Form.Control className='contact_input' as="textarea" rows={4} name="message" placeholder={t('contactUs.typeYourMessage')}value={Message} onChange={(e)=>setMessage(e.target.value)} />
-          </Form.Group>
-          <div className='button_container'>
-            <Button className='mt-4 button' type="submit">
-              {isLoading? t("loading...") :<span>{t('contactUs.submit')}<MdKeyboardDoubleArrowRight/></span>}
-            </Button>
-          </div>
-        </Form>
-      </div>
-    </div>
     </Layout>
   )
 }

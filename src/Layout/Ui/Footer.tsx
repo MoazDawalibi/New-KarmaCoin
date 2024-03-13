@@ -6,8 +6,8 @@ import { Tooltip } from 'antd';
 import { BaseURL } from '../../api/config';
 
 const Footer = () => {
-    const {t} = useTranslation();
-    const { data: socialMediaData } = useGetSocialMedia()
+  const {t} = useTranslation();
+  const { data: socialMediaData } = useGetSocialMedia()
   
   const socialMediaItems = Array.isArray(socialMediaData?.data)
   ? socialMediaData?.data.map((social: any, index: number) => (

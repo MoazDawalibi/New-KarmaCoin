@@ -20,15 +20,9 @@ function useAddMutation(key: string, url: string): UseMutationResult<AxiosRespon
     },
     {
       onSuccess: (data) => {
-        queryClient.invalidateQueries([key]);
-        // toast.success(data.message || "Add Successful");
-
-        
+        queryClient.invalidateQueries([key]);        
       },
       onError: (error:any) => {
-        // console.log("fwergfrrrrrrrrrrrr",error.response.this.status);
-          // console.log(error.response);
-          
         if(error.response.status == 401 || error?.response?.status == 403){
           toast.error(t("Please Login First"))
         }else{

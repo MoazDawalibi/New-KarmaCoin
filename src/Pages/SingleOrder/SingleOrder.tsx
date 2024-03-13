@@ -34,16 +34,7 @@ import OrderStatus from '../../Components/Ui/Order/OrderStatus';
     const  {user}= useSelector((state:any)  => state.auth)
 
     const order = data?.data 
-    
-    console.log(data?.data);
-    
 
-    // if(isLoading){
-    //   return <LoadingPage/>
-    // }
-    // if(isError){
-    //   return <NotFoundPage/>
-    // }
     return (
       <Layout>
         <section
@@ -67,7 +58,6 @@ import OrderStatus from '../../Components/Ui/Order/OrderStatus';
                     <div className="d-flex justify-content-between align-items-center mb-4">
                       <p
                         className="lead fw-normal mb-0 "
-                        // style={{ color: "#a8729a" }}
                       >
                         {t("Receipt")}
                       </p>

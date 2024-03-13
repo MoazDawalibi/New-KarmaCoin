@@ -23,7 +23,6 @@ const Default = ({ name, label, placeholder, isDisabled, onChange, props }: any)
           name={name}
           disabled={isDisabled}
           className="w-100"
-        //  onChange={onChange ? onChange : handleChange}
         />
       </Form.Item>
     </div>

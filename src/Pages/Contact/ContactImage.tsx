@@ -1,6 +1,8 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 
 const ContactImage = () => {
+  const {t} = useTranslation();
   return (
    <svg
   id="e0b35d3b-637f-4cd2-a9fd-b6e76c92ec56"
@@ -11,7 +13,7 @@ const ContactImage = () => {
   viewBox="0 0 912.92081 680.22808"
   className='ContactImage'
 >
-  <title>delivery_address</title>
+  <title>{t("Contact Us")}</title>
   <rect
     x="102.00233"
     y="641.27035"

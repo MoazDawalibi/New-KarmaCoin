@@ -22,6 +22,7 @@ export const NavigationLinks = ({ className }: any) => {
     { label: t('orders'), to: '/orders' },
   ];
 
+  //this is a scroll function based on id 
   const scrollToElement = (id: string) => {
     const element = document.getElementById(id);
     if (element) {

@@ -13,30 +13,20 @@ const Consigne = () => {
   const [Name , setName] = useState('') 
   const [Description , setDescription] = useState('') 
   const [Price , setPrice] = useState('') 
-
   const [Email , setEmail] = useState('') 
   const [Message , setMessage] = useState('') 
+  const [ClearIMageCoins, setClearIMageCoins] = useState('')
+  const [ClearIMageCoins2, setClearIMageCoins2] = useState('')
 
   const {mutate , isSuccess, isLoading} = useAddProduct()
   const form = useRef<any>(null);
   const { t } = useTranslation();
   const handelSubmit = (e:React.FormEvent<HTMLFormElement>)=>{
     e.preventDefault()
-    // console.log(form.current);
-
     if(!Name || !Description || !Message || !Price || !ClearIMageCoins || !ClearIMageCoins2 ){
       toast.error(t("please_fill_all_input"))
       return;
     }
-console.log(getDataToSend({
-  name:Name,
-  description:Description,
-  note:Message,
-  price:Price,
-  image:ClearIMageCoins,
-  image2:ClearIMageCoins2,
-
-}));
 
     mutate(getDataToSend({
       name:Name,
@@ -45,22 +35,17 @@ console.log(getDataToSend({
       price:Price,
       image:ClearIMageCoins,
       image2:ClearIMageCoins2,
-
     }))
   }
+
    const getDataToSend = (values: any): FormData => {
     const data = { ...values };
-    
-  
     const formData = new FormData();
     buildFormData(formData, data);
     return formData;
   };
   
-  
-  
   useEffect(()=>{
-
     if(isSuccess){
       toast.success(t('message_send_successfully'))
       setMessage('')
@@ -71,11 +56,9 @@ console.log(getDataToSend({
       setClearIMageCoins2("")
     }
   },[isSuccess])
-  const [ClearIMageCoins, setClearIMageCoins] = useState('')
-  const [ClearIMageCoins2, setClearIMageCoins2] = useState('')
 
   return (
-    <Layout>
+    <Layout className='consign'>
         <div className='title_container'>
           <h1 className='title'>{t("How to consign")}</h1>
           <p className='text'>{t("If you are interested in consigning, we look forward to helping you. Send us photos, contact us by phone/email, or visit us at our office")}.</p>
@@ -86,7 +69,6 @@ console.log(getDataToSend({
             <p>{t("Upload Photos")}</p>
             <File label={t("ClearIMageCoins")} set={setClearIMageCoins} />
             <File label={t("ClearIMageCoins2")} set={setClearIMageCoins2} />
-            
           </div>
 
           <div className='messages'>
@@ -124,6 +106,7 @@ console.log(getDataToSend({
             <p className='p'>{t("Address")}: <span>damascus mazzeh</span></p>
           </div>
         </div>
+        
     </Layout>
   )
 }

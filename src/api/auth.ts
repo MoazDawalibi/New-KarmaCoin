@@ -1,14 +1,11 @@
 import useAddMutation from "./helper/useAddMutation"
 
 
-
-
 const API = {
     login:"/api/user/login",
     register:"/api/user/register",
     verify:"/api/user/verify",
-    sendCode:"/api/user/resendCode",
-    
+    sendCode:"/api/user/resendCode",    
 }
 
 

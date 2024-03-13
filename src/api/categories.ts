@@ -1,15 +1,8 @@
-import useAddMutation from "./helper/useAddMutation"
-import useDeleteMutation from "./helper/useDeleteMutation"
 import useGetQuery from "./helper/useGetQuery"
-import useGetQueryPagination from "./helper/useGetQueryPagination"
-import useUpdateMutation from "./helper/useUpdateMutation"
 
 
-
-const API = {
-    
+const API = {    
     GET:"/api/user/category/getAll",
-
 }
 
 const KEY = "Categories"

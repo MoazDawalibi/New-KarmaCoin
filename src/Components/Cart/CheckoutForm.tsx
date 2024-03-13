@@ -1,7 +1,6 @@
 import React from 'react'
 import { Currency } from '../../Layout/app/Const';
-import { Button, Divider, Flex, Input } from 'antd';
-import TextArea from 'antd/es/input/TextArea';
+import { Button, Divider } from 'antd';
 import { useFormikContext } from 'formik';
 import { useTranslation } from 'react-i18next';
 
@@ -15,17 +14,14 @@ const CheckoutForm = ({delivery_fees , sub_total ,setViewPage}:any) => {
   
   return (
     <>
-         <div style={{display:"flex" , flexDirection:"column" , alignItems:"flex-start"}}>
-              <div style={{display:"flex" , alignItems:"center"}}><p>{t("Sub Total")} : </p> <p>{sub_total} {Currency}</p></div>
-              <div style={{display:"flex" , alignItems:"center"}}><p>{t("Delivery Fees")} : </p> <p>{delivery_fees} {Currency}</p></div>
+      <div style={{display:"flex" , flexDirection:"column" , alignItems:"flex-start"}}>
+        <div style={{display:"flex" , alignItems:"center"}}><p>{t("Sub Total")} : </p> <p>{sub_total} {Currency}</p></div>
+        <div style={{display:"flex" , alignItems:"center"}}><p>{t("Delivery Fees")} : </p> <p>{delivery_fees} {Currency}</p></div>
+      </div>
 
-              </div>
-
-              <div className='Divider'>  <Divider /></div>
-              <div>{t("Total")} : {sub_total}{Currency}</div>
-        
-
-              <div> <Button block type='primary'onClick={handleSubmit}  >{t("Checkout")}</Button> </div>
+      <div className='Divider'>  <Divider /></div>
+      <div>{t("Total")} : {sub_total}{Currency}</div>
+      <div> <Button block type='primary'onClick={handleSubmit}  >{t("Checkout")}</Button> </div>
     </>
   )
 }

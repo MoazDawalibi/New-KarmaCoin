@@ -7,25 +7,19 @@ import {
 import React, { useState } from 'react';
 import { Card, Skeleton, Popconfirm, Button, Tooltip } from 'antd';
 import useLoadingState from '../../Hooks/useLoadingState';
-import { TProduct } from '../../Layout/app/Types';
 import { Currency } from '../../Layout/app/Const';
-import { BaseURL, BaseURL_IMAGE } from '../../api/config';
+import { BaseURL_IMAGE } from '../../api/config';
 import { useTranslation } from 'react-i18next';
-import { useAddToCart, useRemoveFromCart, useUpdateCartCount } from '../../api/cart';
+import { useRemoveFromCart, useUpdateCartCount } from '../../api/cart';
 import { toast } from 'react-toastify';
 
 interface CartItemProps {
   item: any;
-
 }
-
 
 const CartItem: React.FC<CartItemProps> = ({ item }) => {
   const [loading, resetLoading] = useLoadingState(true, 2000);
-  const [counter, setCounter] = useState<number>(item.quantity);
   const [price, setPrice] = useState<number>(Number(item.product.product_price));
-
-  // const [newPrice, setNewPrice] = useState<number>(Number(item.product.product_price));
   const [newCounter, setNewCounter] = useState<number>(item.quantity);
   const [isConfirmVisible, setConfirmVisible] = useState<boolean>(false);
   const [isApiLoading, setApiLoading] = useState<boolean>(false);
@@ -68,7 +62,6 @@ const CartItem: React.FC<CartItemProps> = ({ item }) => {
   };
 
 
-  let  OnePrice = Number(item.product.product_price) / item.quantity;
 
   
 
@@ -76,6 +69,7 @@ const CartItem: React.FC<CartItemProps> = ({ item }) => {
     <div className='CartItem'>
       <Skeleton loading={loading} active avatar style={{ marginTop: 22 }}>
         <Card loading={loading}>
+
           <span className='Cart_Img'>
             <img
               alt=''
@@ -83,6 +77,7 @@ const CartItem: React.FC<CartItemProps> = ({ item }) => {
               src={BaseURL_IMAGE + item.product.product_main_image}
             />
           </span>
+
           <span className='Cart_Info' style={{ marginInline: '10px' }}>
             <h5>{item?.product?.product_translations?.at(0)?.name}</h5>
             <span style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-around' }}>
@@ -98,6 +93,7 @@ const CartItem: React.FC<CartItemProps> = ({ item }) => {
             </strong>
             <p> {t("Quantity")} :{newCounter} </p>
           </span>
+
           <span className='Card_Counter'>
             <Button shape='circle' icon={<PlusCircleFilled />} onClick={handleIncrement} />
             <div className='Counter'>{newCounter}</div>
@@ -115,19 +111,19 @@ const CartItem: React.FC<CartItemProps> = ({ item }) => {
             )}
 
           </span>
+
           <span className='Cart_Delete'>
             <Popconfirm onConfirm={()=>{mutate({
-                          product_id:item?.product?.id,
-                      })
-                      toast.success('Remove from cart')
-
-                      }}
-                title={t("Delete the Item")} description={t("Are you sure to delete this Item")+"?"} okText={t("Yes")} cancelText={t("No")}>
+                product_id:item?.product?.id,
+            })
+            toast.success('Remove from cart')}}
+            title={t("Delete the Item")} description={t("Are you sure to delete this Item")+"?"} okText={t("Yes")} cancelText={t("No")}>
               <Tooltip title={t("Delete")} placement='bottom'>
                 <Button shape='circle' icon={<CloseOutlined />} danger />
               </Tooltip>
             </Popconfirm>
           </span>
+          
         </Card>
       </Skeleton>
     </div>

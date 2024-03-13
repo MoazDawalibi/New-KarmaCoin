@@ -10,8 +10,6 @@ const useSearchResults = (data: any[] | undefined, query: string | null) => {
 
     setResults(filteredResults);
 
-    
-    
     if(results?.length === 0 && query != null && query?.length > 1 ){
         
     }

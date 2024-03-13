@@ -7,15 +7,12 @@ interface StepsUiProps {
 }
 const StepsUi: React.FC <StepsUiProps>= ({ViewPage,setViewPage}) => {
   const {t} = useTranslation();
-
   const [current, setCurrent] = useState(ViewPage);
   const onChange = (value: number) => {
-    // setViewPage(value)
-    // setCurrent(value);
   };
 
   return (
-    <div       className='StepsUi' >
+    <div   className='StepsUi' >
       <Steps
         current={current}
         onChange={onChange}
@@ -32,10 +29,6 @@ const StepsUi: React.FC <StepsUiProps>= ({ViewPage,setViewPage}) => {
             title: t('Payment'),
             description:t("Pay with"),
           }
-          // {
-          //   title: 'Review',
-          //   description:"Rate Us",
-          // }
         ]}
       />
 

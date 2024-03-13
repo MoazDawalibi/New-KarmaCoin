@@ -1,19 +1,13 @@
 import Layout from '../../Layout/Ui/Layout'
-import { Field, Form, Formik, useFormikContext } from 'formik'
+import { Field, Form, Formik } from 'formik'
 import React, { useEffect, useMemo, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { useRegister } from '../../api/auth';
-// import { LoadingButton } from '../../Components/Utils/Loading/LoadingButton';
 import { useDispatch } from 'react-redux';
-import { register } from '../../Redux/auth/AuthReducer';
 import { useTranslation } from 'react-i18next';
-// import Select from 'react-select'
 //@ts-ignore
 import countryList from 'react-select-country-list'
 import { Select, Space } from 'antd';
-//@ts-ignore
-import emailjs from '@emailjs/browser';
-import { toast } from 'react-toastify';
 import { USER_EMAIL } from '../../config/AppKey';
 import { LoadingButton } from '../../Components/Utils/Loading/LoadingButton';
 import { MdKeyboardDoubleArrowRight } from 'react-icons/md'
@@ -25,55 +19,50 @@ const Register = () => {
   const [t] = useTranslation()
   const dispatch = useDispatch()
   const [value, setValue] = useState('')
-  const [isVirfied, setisVirfied] = useState(false)
+  const form = useRef<any>(null);
+  const options = useMemo(() => countryList().getData(), [])
+
+
+  
+  useEffect(() => {
+    if (isSuccess) {      
+      navigate('/verified ', { replace: true })
+    }
+  }, [isSuccess, navigate, data , dispatch])
 
   const handelSubmit = (values: any) => {
-    mutate(
-      {
+    mutate({
         name: values['name'],
         email: values['email'],
         password: values['password'],
         country:value,
         phone: values['phone']
-      }
-    )
-   return localStorage.setItem(USER_EMAIL , values.email );
-  }
+      })  
+   return localStorage.setItem(USER_EMAIL , values.email );   
+  }   
 
-  useEffect(() => {
-    if (isSuccess) {
-      // dispatch(register((data as any)?.data))
-      
-      navigate('/verified ', { replace: true })
-    }
-  }, [isSuccess, navigate, data , dispatch])
-
-
-  const options = useMemo(() => countryList().getData(), [])
-  const formik = useFormikContext();
 
   const SelecthandleChange = (value:any,label:any) => {
-
     setValue(label?.label)
-
  };
- const form = useRef<any>(null);
 
- const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
-  e.preventDefault();
 
-  if (form.current) {
-    emailjs.sendForm('service_49y5tqk', 'template_w4976q5', form.current, 'ivQFaIMbNe3DbNhA0')
-      .then((result:any) => {
-        console.log(result.text);
-        form.current.reset();
-        toast.success(t('contact.emailSentSuccess'));
-      })
-      .catch((error:any) => {
-        console.log(error.text);
-      });
-  }
-};
+///////// SEND THE MESSAGE ON YOUR GMAIL FEAUTURE  ////// 
+//  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+//   e.preventDefault();
+
+//   if (form.current) {
+//     emailjs.sendForm('service_49y5tqk', 'template_w4976q5', form.current, 'ivQFaIMbNe3DbNhA0')
+//       .then((result:any) => {
+//         console.log(result.text);
+//         form.current.reset();
+//         toast.success(t('contact.emailSentSuccess'));
+//       })
+//       .catch((error:any) => {
+//         console.log(error.text);
+//       });
+//   }
+// };
 
 
   return (
@@ -108,7 +97,6 @@ const Register = () => {
 
             <div className='login_dev'>
               <Select
-              // style={{ width: "100%" }}
               className='select'
               onChange={SelecthandleChange}
               options={options}

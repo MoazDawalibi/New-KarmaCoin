@@ -1,8 +1,8 @@
 
 import React, { useEffect, useState } from 'react'
-import { Button, Input, Result } from 'antd';
+import { Result } from 'antd';
 import { useNavigate } from 'react-router-dom';
-import { useRegister, useSendCode, useVerify } from '../../api/auth';
+import { useSendCode, useVerify } from '../../api/auth';
 import { useTranslation } from 'react-i18next';
 import ReactCodeInput from 'react-verification-code-input';
 import { toast } from 'react-toastify';
@@ -38,18 +38,10 @@ const Virefied = () => {
         toast.success(t('Verified Successfully'))
         dispatch(register(data.data)) 
         navigate('/success_verify')
-        
       }
     },[isSuccess])
     
-    useEffect(()=> {
-      if(isError){
-        
-    }
-    },[isError])
-   
   const handleSendCode = () => {
-
       if(codeSuccess){
         sendCodeMutate({
           email: localStorage.getItem(USER_EMAIL), 
@@ -83,8 +75,8 @@ const Virefied = () => {
           </div>
         }
         children={<div className='button_container'><button className='verify_button' onClick={handleSubmit}>{t("Submit")}<MdKeyboardDoubleArrowRight/></button></div>}
-      />
-    </div>
+        />
+      </div>
     </Layout>
   )
 }

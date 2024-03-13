@@ -11,9 +11,7 @@
         color: #fff;
     }
 }
-// .topLinks{
-//     // padding-top: 30px;
-// }
+
 .ar{
     .contianer{    
         .right{
@@ -173,14 +171,9 @@
     height: 1px;
 }
 .fakeNav{
-    // display: none !important;
     height: 9vh;
     display: flex;justify-content: space-between;align-items: center;
     width: 96%;
-
-//    padding: 0;
-//    margin: 0; 
-    // background: var(--primary);
     margin-inline: auto;
     div{
         width: 50%;
@@ -229,7 +222,6 @@
 
 
 :where(.css-dev-only-do-not-override-i1mju1).ant-drawer .ant-drawer-body {
-// background: var(--primary);
 padding: 0 24px;
 }
 .menuButton{
@@ -245,7 +237,6 @@ padding: 0 24px;
             font-size: 25px;
             color: #fff;
             &:hover{
-                // background: #000;
                 color: #fff !important;
             }
         }
@@ -297,8 +288,6 @@ padding: 0 24px;
             .link2{
                 cursor: pointer;
                 margin-right: 1vw;
-            // border: none !important;
-            // border-right: 2px solid #000;
                 border-left: 2px solid #000;    
             }
         }
@@ -334,14 +323,11 @@ padding: 0 24px;
             .countArabic{
                 display: none  !important;  
                 top: 15px !important;
-                // right: 90px !important;
             }
-            // display: flex;justify-content: center;align-items: center;
             .cart_count{
                 display: flex;justify-content: center;align-items: center;
                 position: absolute;
                 top: 15px;
-                // right: 90px;
                 left: 90px;
                 font-size: 10px;
                 color: #000;
@@ -350,7 +336,6 @@ padding: 0 24px;
                 border-radius: 50%;
                 width: 20px;
                 height: 20px;
-                // text-align: center;
             }
             
             div{
@@ -365,40 +350,6 @@ padding: 0 24px;
             }
         }
     }
-    // .ar{
-    //     .cart_count{
-    //         display: none !important;
-    //     }
-    //     .countArabic{
-    //         display: inline-block !important;
-    //     }
-    //     // .viewCart{
-    //     //     padding-right: 15px;
-    //     //     .countArabic{
-    //     //         // display: block !important;justify-content: center;align-items: center;
-    //     //         // position: absolute;
-    //     //         // top: 15px;
-    //     //         // left: 80% ;
-    //     //         // font-size: 10px;
-    //     //         // color: #000;
-    //     //         // background: #fff;
-    //     //         // padding: 0px;
-    //     //         // border-radius: 50%;
-    //     //         // width: 20px;
-    //     //         // height: 20px;
-    //     //     }
-    //     //     div{
-    //     //         padding: 14px;
-    //     //         background: var(--primary);
-    //     //         border-radius: 50%;
-    //     //         border: 1px solid #fff;
-    //     //         svg{
-    //     //             color: #fff;
-    //     //             font-size: 30px;
-    //     //         }
-    //     //     }
-    //     // }
-    // }
     .DrawerLinks{
             display: flex; flex-direction: column;justify-content: start;align-items: start;
             width: 98%;
@@ -454,8 +405,6 @@ padding: 0 24px;
 .ant-modal-content{
     padding : 20px;
     background: hsl(212.73deg 29.73% 92.75%) !important;
-    // width: fit-content;
-
 }
 .LoginModel{
     background: hsl(212.73deg 29.73% 92.75%);
@@ -464,7 +413,6 @@ padding: 0 24px;
     min-height: 280px;
     gap: 10px;
     h1{
-        // text-wrap: nowrap;
         margin-bottom: 20px;
         color:  hsl(214.44deg 49.09% 21.57%);
         font-size: 28px;
@@ -481,9 +429,7 @@ padding: 0 24px;
             width: 100%;
             gap: 30px;
                 .login_dev{
-                    // display: none;
                     width: 100%;
-                    // padding: 12px;
                     @include Shadow;  
                     label{
                         font-weight: bolder;
@@ -510,9 +456,6 @@ padding: 0 24px;
             }
         }
         
-      
-
-
     }
     .LoginModel_Right{
         background: hsl(215.29deg 23.29% 85.69%);
@@ -625,7 +568,6 @@ padding: 0 24px;
             button{
                 width: 120px;
                 padding: 10px;
-                // flex: 70%;
                 align-self: flex-start !important;
                 background: hsl(214.44deg 49.09% 21.57%);
                 outline: none;
@@ -675,12 +617,6 @@ padding: 0 24px;
         width: 50%;
         justify-content: end;
     }
-    
-    .viewCart{
-        .cart_count{
-            // right: 70px !important;
-        }
-    }
 }
 
 
@@ -699,8 +635,6 @@ padding: 0 24px;
         }
     }
 }
-
-
 
 .Toastify__toast-container--top-right{
     z-index:9999999999999;

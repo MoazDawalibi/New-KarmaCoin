@@ -4,7 +4,6 @@
 html,body {
     background: var(--bg);
     font-family: "Sagona Book";
-
 }
 
 *{
@@ -17,8 +16,6 @@ a {
     font-weight: bold;
     text-decoration: none !important;
     cursor: pointer;
-    
-
 }
 
 button,
@@ -26,24 +23,18 @@ svg {
     cursor: pointer;
 }
 
-
-
 .not_foound_page{
     background: black;
     height: 100vh;
     display: flex;justify-content: center;align-items:center;
-
-
     p{
         color: white;
         display: inline;
-    
     }
     h6{
         display: inline;
         margin-inline:20px;
         height: 140px !important;
-        
         width: 20px;
     }
     .container-not-found{
@@ -52,14 +43,12 @@ svg {
         align-items: center;
         div{
             display: flex;justify-content: center;align-items: center;
-
         }
         button{
             border: none;
             outline: none;
             padding: 8px;
             border-radius: 10px;
-
             margin-inline:30px;
         }
     }
@@ -69,12 +58,6 @@ svg {
     display: flex;
 }
 
-
-:where(.css-dev-only-do-not-override-i1mju1).ant-btn.ant-btn-icon-only{
-    &:hover{
-        // background: ;
-    }
-}
 .ant-drawer-header{
     display: none !important;
 }
@@ -90,9 +73,7 @@ svg {
     }
 }
 
-
 .point_container{
-    // background: #000;
     .point{
         display: none !important;
     }

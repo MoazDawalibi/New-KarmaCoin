@@ -37,7 +37,6 @@ const File = ({  label,set }: any) => {
         defaultFileList={[...fileList]}
         onChange={ FilehandleChange}
         customRequest={customRequest}
-
       >
         <Button className='w-100 partner_image'  icon={<UploadOutlined  />}>{t("upload_image")}</Button>
       </Upload>

@@ -1,8 +1,6 @@
 import useGetQuery from "./helper/useGetQuery"
 
 
-
-
 const API = {
     aboutus :"/api/about-us"
 }

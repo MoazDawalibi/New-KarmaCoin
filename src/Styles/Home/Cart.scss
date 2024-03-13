@@ -16,7 +16,7 @@
     transform: translateY(5px);
 }
 :where(.css-dev-only-do-not-override-i1mju1).ant-badge .ant-badge-count, :where(.css-dev-only-do-not-override-i1mju1).ant-badge .ant-badge-dot, :where(.css-dev-only-do-not-override-i1mju1).ant-badge .ant-scroll-number-custom-component{
-        transform: translate(15%, -50%) !important;
+    transform: translate(15%, -50%) !important;
 }
 :where(.css-dev-only-do-not-override-i1mju1).ant-btn-primary:not(:disabled):not(.ant-btn-disabled):hover{
     background: var(--primary) !important;
@@ -58,7 +58,6 @@
 }
 
 .CartBody .CartBody_Right button{
-    // display: none;
     width: 20% !important;
 }
 .CartBody{
@@ -77,44 +76,37 @@
         flex-direction: column !important;
         gap: 0px;
         margin-bottom: 30px;
-      
-
-
-        
     }
     .CartBody_Right{
         flex: 40%;
-    background-color:var(--bg);
-    color:var(--text);
-    // position: relative;
-    border-radius: 8px;
-    @include Shadow;
-   display: flex;
-   flex-direction: column;
-   width: 100%;
-   gap: 5px;
-   position: sticky;
-   right: 10px;
-   top: 10px;
-   height: fit-content;
-   padding: 40px 20px;
-   button{
-    margin-top: 20px;
-    background: var(--primary);
-    color: var(--bg);
-}
-   .Divider{
-    margin-bottom: 5px;
-    max-height: 5px;
-   }
-   >div{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0px 5%;
-
-   }
-
+        background-color:var(--bg);
+        color:var(--text);
+        border-radius: 8px;
+        @include Shadow;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 5px;
+        position: sticky;
+        right: 10px;
+        top: 10px;
+        height: fit-content;
+        padding: 40px 20px;
+        button{
+        margin-top: 20px;
+        background: var(--primary);
+        color: var(--bg);
+        }
+        .Divider{
+            margin-bottom: 5px;
+            max-height: 5px;
+        }
+        >div{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px 5%;
+        }
     }
 }
 
@@ -139,12 +131,10 @@
     .ant-card-body{display: flex;  width: 100%; padding: 20px 40px;    display: flex; align-items: center;  gap: 20px;  }
     .Cart_Img{
         height: 100%;
-                 img{
-                    width: 150px;
-                    object-fit: cover;
-                    
-                  }
-  
+        img{
+        width: 150px;
+        object-fit: cover;
+        }
       } 
       .Cart_Info{
         text-align: start;
@@ -153,10 +143,8 @@
                 margin-bottom: 0 !important;
             }
         }
-
       }
       .Cart_Counter{
-        // margin-inline: 10%;
         display: flex;align-items: flex-start; justify-content: center; gap: 1px;
         svg{
             color: var(--primary);
@@ -190,7 +178,6 @@
         flex-direction: column;
         gap: 50px;
         max-height: 150vh;
-        // overflow-y: auto;
         @include Shadow;
         height: fit-content;
         .primary{
@@ -210,13 +197,11 @@
             .BackToCart_Button{
                 margin-top: 5px !important;
             }
-            
         }
         >div{
             width: 100%;
             gap: 4%;
             display: flex;  
-
         }
         .KarimField{
             :where(.css-dev-only-do-not-override-i1mju1).ant-input-affix-wrapper:not(.ant-input-disabled){
@@ -232,34 +217,32 @@
     }
     .DetailsBody_Right{
         flex: 40%;
-    height: 480px;
-    background-color:var(--bg);
-    color:var(--text);
-    position: relative;
-    border-radius: 8px;
-    @include Shadow;
-   display: flex;
-   flex-direction: column;
-   width: 100%;
-   padding: 20px;
-   gap: 5px;
-   button{
-    
-    margin-top: 20px;
-    background: var(--primary);
-    color: var(--bg);
-}
-   .Divider{
-    margin-bottom: 5px;
-    max-height: 5px;
-   }
-   >div{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0px 5%;
-
-   }
+        height: 480px;
+        background-color:var(--bg);
+        color:var(--text);
+        position: relative;
+        border-radius: 8px;
+        @include Shadow;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 20px;
+        gap: 5px;
+        button{
+        margin-top: 20px;
+        background: var(--primary);
+        color: var(--bg);
+    }
+        .Divider{
+            margin-bottom: 5px;
+            max-height: 5px;
+        }
+        >div{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px 5%;
+        }
     }
 }
 
@@ -276,7 +259,6 @@
         flex-direction: column;
         gap: 5px;
         max-height: 150vh;
-        // overflow-y: auto;
         @include Shadow;
         height: fit-content;
         padding: 20px;
@@ -284,58 +266,53 @@
         font-weight: bold;
 
         :where(.css-dev-only-do-not-override-i1mju1).ant-radio-wrapper .ant-radio{
-            // background-color: inherit !important;
-            // padding: 10px;
-            // opacity: 1;
             border: 1px solid var(--primary);
             input{
-            // opacity: 1;
                 background-color: #000 !important;
             }
         }
     }
     .PaymentBody_Right{
         flex: 40%;
-    height: 480px;
-    background-color:var(--bg);
-    color:var(--text);
-    position: relative;
-    border-radius: 8px;
-    @include Shadow;
-   display: flex;
-   flex-direction: column;
-   width: 100%;
-   padding: 20px;
-   gap: 5px;
-   button{
-    margin-top: 20px;
-    background: var(--primary);
-    color: var(--bg);
-}
-   .Divider{
-    margin-bottom: 5px;
-    max-height: 5px;
-   }
-   >div{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0px 5%;
-
-   }
-    }
-     .credit_card{
-    padding-inline: 20px;
-    >div{
+        height: 480px;
+        background-color:var(--bg);
+        color:var(--text);
+        position: relative;
+        border-radius: 8px;
+        @include Shadow;
         display: flex;
-        gap: 20px;
-        margin-block: 15px;
+        flex-direction: column;
+        width: 100%;
+        padding: 20px;
+        gap: 5px;
+        button{
+            margin-top: 20px;
+            background: var(--primary);
+            color: var(--bg);
+        }
+        .Divider{
+            margin-bottom: 5px;
+            max-height: 5px;
+        }
+        >div{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px 5%;
+        }
     }
-     button{
-    margin-top: 5px;
-    background: var(--primary);
-    color: var(--bg);
-}
+    .credit_card{
+        padding-inline: 20px;
+        >div{
+            display: flex;
+            gap: 20px;
+            margin-block: 15px;
+        }
+        button{
+        margin-top: 5px;
+        background: var(--primary);
+        color: var(--bg);
+        }
    }
    .with_Paypal{
        padding-inline: 20px;
@@ -346,10 +323,10 @@
 
     }
      button{
-    margin-top: 5px;
-    background: var(--primary);
-    color: var(--bg);
-}
+        margin-top: 5px;
+        background: var(--primary);
+        color: var(--bg);
+    }
    }
 }
 .Rate{
@@ -424,7 +401,6 @@
         }
     }
     .CartBody .CartBody_Right button{
-        // display: none;
         width: 40% !important;
     }
 }
@@ -502,8 +478,6 @@
     }   
     .CartItem{
         .Cart_Info{
-            // width: 100% !important;
-            // display: none;
             h5{
                 width: 100% !important;
                 font-size: 7px;
@@ -555,30 +529,25 @@
             }
         }
       }
-    //   .CartItem .ant-card-body{
-    //     padding: 20px 0 !important;
-    // }  
-       
 }
 
 .ar{
     .CartItem{
         width: 100%;
         padding: 10px;
-        
         strong{
             color: var(--primary);
         }
         .ant-card-body{display: flex;  width: 100%; padding: 20px 40px;    display: flex; align-items: center;  gap: 20px;  }
+
         .Cart_Img{
             height: 100%;
-                     img{
-                        width: 150px;
-                        object-fit: cover;
-                        
-                      }
-      
-          } 
+            img{
+            width: 150px;
+            object-fit: cover;
+            
+            }
+        } 
           .Cart_Info{
             text-align: end;
             span{
@@ -586,10 +555,8 @@
                     margin-bottom: 0 !important;
                 }
             }
-    
           }
           .Cart_Counter{
-            // margin-inline: 10%;
             display: flex;align-items: flex-start; justify-content: center; gap: 1px;
             svg{
                 color: var(--primary);
@@ -608,14 +575,12 @@
             left: 0 !important;
             top: 10px;
         }
-      
     }
 }
 
 .ar {
     
 @media screen and (max-width: 900px)  {
-   
     .CartItem{
         strong{
             font-size: 10px;
@@ -629,11 +594,10 @@
                 font-size: 10px;
             }
         }
-          .Cart_Counter{
-            transform: translateX(-50%);
-          }
-    }
-       
+        .Cart_Counter{
+        transform: translateX(-50%);
+        }
+    }    
 }
 
 
@@ -656,13 +620,10 @@
        .ant-steps-label-horizontal .ant-steps-item .ant-steps-item-description{
         font-size: 10px;
        }
-       
-       
 }
 
 
 @media screen and (max-width: 550px) {
-    
     .CartBody{
         .Cart_Img{
             img{
@@ -671,11 +632,9 @@
             }
         }
     }
-       
 }
 
 @media screen and (max-width: 460px) {
-    
     .CartBody{
         .Cart_Img{
             img{
@@ -686,7 +645,6 @@
     }
     .ant-card-body{display: flex;  width: 100%; padding: 20px 10px !important;    display: flex; align-items: center;  gap: 20px;  }
     .Cart_Info{
-        // width: 30vw !important;
         span{
             h6{
                 margin-bottom: 0 !important;
@@ -704,6 +662,5 @@
                 font-size: 7px !important;
             }
         }
-        
     }
 }

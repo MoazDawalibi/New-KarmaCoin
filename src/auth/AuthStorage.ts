@@ -30,7 +30,6 @@ const storeUser = (user: User | null): void => {
 
 const getUser = (): User | null => {
   const userString = localStorage.getItem(USER_KEY) == 'undefined' ?  "": localStorage.getItem(USER_KEY) ;
-  // console.log(userString);
   
   return userString ? JSON.parse(userString || " ") : null;
 };

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Button, Input, Form } from 'antd';
-import { ErrorMessage, Field, useFormikContext } from 'formik';
+import { useFormikContext } from 'formik';
 import { object } from 'yup';
 import Default from './Default';
 import { useTranslation } from 'react-i18next';
@@ -36,8 +36,6 @@ const DetailsBody = ({ setViewPage }: any) => {
           <div className='Address'>
             <h5>{t("Shipping Address")}</h5>
             <div>
-              {/* <Default 
-              name='phone'/> */}
               <Default  name='zone' placeholder="Zone Number" type='number' />
             </div>
             <div>

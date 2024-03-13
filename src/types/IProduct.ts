@@ -1,12 +1,11 @@
 
 
-export   interface    IProduct {
-
+export interface IProduct {
     id: number
-product_main_image: string
-product_price: string
-product_quantity: number
-product_translations :IProductTranslation[]
+    product_main_image: string
+    product_price: string
+    product_quantity: number
+    product_translations :IProductTranslation[]
 }
 
 export interface IProductTranslation {

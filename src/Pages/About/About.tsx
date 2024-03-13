@@ -6,10 +6,9 @@ import Layout from '../../Layout/Ui/Layout'
 
 const About = () => {
   const {data , isLoading} = useGetAboutUs({id:1})
-
   const [t] = useTranslation()
+  
   if(isLoading){
-
     return <LoadingPage/>
   }
 
@@ -21,7 +20,7 @@ const About = () => {
           <h3 className='who_are_we'>{t("Who are we")}</h3>
           <p>{data?.data?.translations?.at(0)?.content}</p>
         </div>
-    </div>
+      </div>
     </Layout>
   )
 }

@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import PaymentForm from './PaymentForm';
 import { Button, Divider, Input, Radio, Space } from 'antd';
-import { useCheckout } from '../../../api/cart';
 import { useFormikContext } from 'formik';
 import { toast } from 'react-toastify';
 import { useTranslation } from 'react-i18next';
@@ -12,13 +10,11 @@ const PaymentBody = ({ setViewPage , isLoading}: any) => {
   const {values, setFieldValue, submitForm , getFieldProps } = formikContext;
   const handleSubmit = () => {
     toast.info("Your Data in proccess")
-    
     submitForm()
   };
 
 
   const [selectedValue, setSelectedValue] = useState(getFieldProps('payment_method').value == 'online' ? 2 :3);
-
   const handleChange = (value: any) => {
     if(value ==3){
       setSelectedValue(value);
@@ -27,10 +23,7 @@ const PaymentBody = ({ setViewPage , isLoading}: any) => {
       setSelectedValue(value);
       setFieldValue('payment_method', 'online')
     }
-
-
   };
-
 
 
   type TRadioUi = { value: number; title: string, className?: string; children: React.ReactNode }
@@ -46,8 +39,7 @@ const PaymentBody = ({ setViewPage , isLoading}: any) => {
           <span>{title} </span>
         </Radio>
         {selectedValue === value && <div className={className}>{children}  </div>}
-              <Divider />
-
+        <Divider />
       </div>
     )
   }
@@ -64,26 +56,17 @@ const PaymentBody = ({ setViewPage , isLoading}: any) => {
               <></>
           </RadioUi>
         </Space>
-       <div>
-           <div className='Buttons_Tr'>
+        <div>
+          <div className='Buttons_Tr'>
             <Button type="dashed" block onClick={()=>setViewPage(1)} >
-      {t("back to Details")}
-    </Button>
-         <Button onClick={()=>{
-        
-          handleSubmit()
-          
-          }} className='primary' type="primary" block>
-       {isLoading ? t("Loading...") : t("Review") }
-    </Button>
-           </div>
-    
-
-           </div>
+              {t("back to Details")}
+            </Button>
+            <Button onClick={()=>{handleSubmit()}} className='primary' type="primary" block>
+              {isLoading ? t("Loading...") : t("Review") }
+            </Button>
+          </div>
+        </div>
       </div>
-      {/* <div className='PaymentBody_Right'>
-        <PaymentForm />
-      </div> */}
     </div>
   )
 }

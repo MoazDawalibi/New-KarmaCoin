@@ -4,7 +4,6 @@
 
 @mixin Flex { display: flex; justify-content: center; align-items: center;}
 
-
 @mixin Hover { &:hover{    color: var(--secondary); }}
 
 @mixin Hover_outline_characters {
@@ -22,7 +21,7 @@
   }
 }
 .underLineText{
-    background-image: linear-gradient(90deg, var(--primary) , var(--secondary));
+  background-image: linear-gradient(90deg, var(--primary) , var(--secondary));
   background-size: 0% 3px;
   background-repeat: no-repeat;
   background-position: left bottom;
@@ -33,14 +32,7 @@
   }
 }
 
-  @media screen and (max-width: 800px) {
-                .test{
-                  background-color: red;
-                }
-  }
-
   @mixin Typewriter {
-    // border-right: 5px solid var(--secondary);
     width: 100%;
     word-spacing: nowrap;
     text-wrap: nowrap;
@@ -53,10 +45,7 @@
     from{
       width: 0;
     }
-
   }
-
-
 
   @mixin Glitch {
   letter-spacing: 5px;

@@ -6,8 +6,6 @@ export const useAuth = () => {
     (state:any) => state.auth
   );
   
-
-
   const logout = () => {
     authStorage.remove()
   };
@@ -16,8 +14,6 @@ export const useAuth = () => {
     user,
     token,
     isAuthenticated,
-   
-    
     logout,
     
   };

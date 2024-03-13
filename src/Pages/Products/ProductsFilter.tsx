@@ -14,13 +14,13 @@ interface FilterState {
   is_highlight: boolean;
 }
 
-
-
 const ProductsFilter = () => {
+
   const navigate = useNavigate();
   const { category_id: paramCategory_id, min_price: paramMin_price, max_price: paramMax_price, all: paramall,is_most_purchased:paramis_most_purchased, is_highlight:paramis_highlight} = useParams();
   const [search] = useSearchParams()
   const [t] = useTranslation()
+
   const [filter, setFilter] = useState<FilterState>({
   category_id: paramCategory_id || 'all',
   min_price: paramMin_price ? parseInt(paramMin_price, 10) : 0,
@@ -30,46 +30,40 @@ const ProductsFilter = () => {
   is_highlight:  false,
 });
 
-const { data } = useGetAllCategories();
-const CategoriesArry = data?.data?.data?.map((item: any) => ({
-  value: item?.id,
-  label: item?.category_translations[0]?.name,
-}));
+  const { data } = useGetAllCategories();
+  const CategoriesArry = data?.data?.data?.map((item: any) => ({
+    value: item?.id,
+    label: item?.category_translations[0]?.name,
+  }));
 
-CategoriesArry?.push({ value: 'all', label: t('All') });
+  CategoriesArry?.push({ value: 'all', label: t('All') });
 
-useEffect(() => {
-  
-  if (!isInitialRender.current) {
-    const queryParams = {
-      category_id: filter.category_id  ? (filter.category_id  == 'all'  ? undefined : filter.category_id) : undefined,
-      min_price: filter.min_price !== 0 ? filter.min_price : undefined,
-      max_price: filter.max_price !== 1000000 ? filter.max_price : undefined,
-      is_most_purchased: filter.is_most_purchased ? filter.is_most_purchased : undefined,
-      is_highlight: filter.is_highlight ? filter.is_highlight : undefined,
-      search:search.get('search') ? search.get('search') : undefined
-    };
-    // console.log(queryParams);
+  useEffect(() => {
     
+    if (!isInitialRender.current) {
+      const queryParams = {
+        category_id: filter.category_id  ? (filter.category_id  == 'all'  ? undefined : filter.category_id) : undefined,
+        min_price: filter.min_price !== 0 ? filter.min_price : undefined,
+        max_price: filter.max_price !== 1000000 ? filter.max_price : undefined,
+        is_most_purchased: filter.is_most_purchased ? filter.is_most_purchased : undefined,
+        is_highlight: filter.is_highlight ? filter.is_highlight : undefined,
+        search:search.get('search') ? search.get('search') : undefined
+      };
 
-    const queryString = Object.entries(queryParams)
-      .filter(([key, value]) => value !== undefined)
-      .map(([key, value]) => `${key}=${value}`)
-      .join('&');
+      const queryString = Object.entries(queryParams)
+        .filter(([key, value]) => value !== undefined)
+        .map(([key, value]) => `${key}=${value}`)
+        .join('&');
 
-    navigate(`/Products${queryString ? `?${queryString}` : ''}`);
-  } else {
-    isInitialRender.current = false;
-  }
-}, [filter, navigate]);
-  // ...
+      navigate(`/Products${queryString ? `?${queryString}` : ''}`);
+    } else {
+      isInitialRender.current = false;
+    }
+  }, [filter, navigate]);
   
   const isInitialRender = useRef<any>(true);
   
-  
-  const handleChange = (value: any, option: any | Array<any>) => {
-    console.log(option);
-    
+  const handleChange = (value: any, option: any | Array<any>) => {    
     setFilter((prevFilter) => ({ ...prevFilter, category_id: option?.value }));
   };
   
@@ -87,6 +81,7 @@ useEffect(() => {
   const handleis_highlightChange = (e: RadioChangeEvent) => {
     setFilter((prevFilter) => ({ ...prevFilter, all: false ,is_highlight:true ,is_most_purchased:false }));
   };
+
   return (
     <div className='ProductsFilter'>
       <span className='ProductsFilter_header'>{t("ProductsFilter")} </span>
@@ -145,16 +140,7 @@ useEffect(() => {
         >
           {t("Most Purchased")}
         </Radio>
-        {/* <Radio
-          value='favourite'
-          checked={filter.is_favourite === true}
-          className='ProductsFilter_options'
-          onChange={handleis_favouriteChange}
-        >
-          {t("Favourite")}
-        </Radio> */}
       </Space>
-      <div></div>
     </div>
   );
 };

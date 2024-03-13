@@ -32,9 +32,6 @@ const useUpdateMutation = (
       onError: (err:any) => {
         const message = err?.response?.data?.message || t("failed_to_update_data");
         toast.error(message);
-
-
-        // validateSession(err.response);
       },
     }
   );

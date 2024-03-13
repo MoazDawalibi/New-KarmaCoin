@@ -6,15 +6,15 @@ import ToastProvider from './lib/ToastProvider'
 
 function ProviderContainer({children}:Tchildren) {
   return (
- <BrowserRouter basename='/'>
+    <BrowserRouter basename='/'>
         <ReduxT>
-     <QueryProvider>
-        <ToastProvider>
-             {children}
-        </ToastProvider>
-    </QueryProvider>
-    </ReduxT>
-</BrowserRouter>
+            <QueryProvider>
+                <ToastProvider>
+                    {children}
+                </ToastProvider>
+            </QueryProvider>
+        </ReduxT>
+    </BrowserRouter>
     )
 }
 

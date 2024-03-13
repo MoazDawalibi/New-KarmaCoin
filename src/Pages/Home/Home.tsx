@@ -17,9 +17,9 @@ console.log(data?.data);
   return (
     <Layout className='HomePage'> 
 
-<div className='slider_section'><img src={BaseURL + data?.data.slider[0]?.slider_translations[0]?.image} alt='Home Image'/></div>
-{/* <div className='slider_section'><img src={"/homeimage.jpg"} alt='Home Image'/></div> */}
-
+      <div className='slider_section'>
+        <img src={BaseURL + data?.data.slider[0]?.slider_translations[0]?.image} alt='Home Image'/>
+      </div>
 
       <div className='contact'>
         <ContactCardHome 
@@ -38,10 +38,10 @@ console.log(data?.data);
 
       <div className='highlight'>
         <h1>{t("Highlight")}</h1>
-       {isLoading ? <LoadingPage/> : <Highlight data={data?.data?.product_highlight}/> } 
+        {isLoading ? <LoadingPage/> : <Highlight data={data?.data?.product_highlight}/> } 
       </div>
 
-      <div className='highlight'>
+      <div className='highlight Most'>
         <h1>{t("Most Purchased")}</h1>
         {isLoading ? <LoadingPage/> : <Highlight data={data?.data?.product_most_purchase}/> } 
       </div>

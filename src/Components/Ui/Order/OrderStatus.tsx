@@ -1,6 +1,5 @@
 import React from "react";
 import { Badge } from "reactstrap";
-
 import { useTranslation } from "react-i18next";
 import { OrderStatusEnum } from "../../../enums/OrderStatus";
 
@@ -13,16 +12,13 @@ const OrderStatus = ({ order_status = OrderStatusEnum.PENDDING }:{order_status:O
         delivered:{color:"success"},
         canceled:{color:"danger"}
     }
-    
-
 
   return (
     <h3 style={{display:"inline"}}>
       <Badge color={all[order_status].color} >
-                {t(order_status)}
-        </Badge>
+        {t(order_status)}
+      </Badge>
     </h3>
-        
   );
 };
 

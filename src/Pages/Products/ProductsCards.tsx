@@ -1,7 +1,6 @@
 import React from 'react';
 import { Spin } from 'antd';
 import CardProduct from '../../Components/Product/ProductCard';
-// import CardProduct from '../../Components/Home/CardProduct';
 import ProductPagination from './ProductPagination';
 
 const ProductsCards = ({ style, setStyle, data, isLoading }: any) => {
