@@ -148,7 +148,9 @@ const Header = (handleRegisterClick: any) => {
           <div className='topLinks2'>
             <div>
               <Link className='link' to={"/register"}>{t("Register")}</Link>
+
               {/* ///////////////////login///////////// */}
+              
               <span className='link2' onClick={() => showModal()}>
                 {
                   isAuthenticated ? (
