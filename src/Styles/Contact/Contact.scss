@@ -1,17 +1,20 @@
-.title_container{
-        width: 100%;
-        background: #e7ecf2;
-        padding-block: 60px;
-        @include Flex;
-    
-    p{
-        font-size: 50px;
-        border-bottom: 1px solid var(--primary);
-        font-weight: normal;
-        text-align: center;
-        width: 15vw;
-        color: var(--primary);
-    }       
+.contact{
+    .title_container{
+            width: 100%;
+            background: #e7ecf2;
+            padding-block: 60px;
+            @include Flex;
+        
+        p{
+            font-size: 50px;
+            border-bottom: 1px solid var(--primary);
+            font-weight: normal;
+            text-align: center;
+            width: 25vw;
+            color: var(--primary);
+        }       
+    }
+    display: flex; flex-direction: column;
 }
 
 .contact_info{
@@ -127,6 +130,14 @@
 }
 
 @media screen and (max-width: 950px) {
+    .contact{
+        .title_container{
+            p{
+                width: 40vw;
+            }       
+        }
+    }
+
 .contact_info{
     display: flex;
     flex-direction: column;
@@ -222,11 +233,14 @@
 }
 
 @media screen and (max-width: 700px) {
-    .title_container{    
-    p{
-        width: 50vw;
-    }       
-}
+    .contact{
+        .title_container{
+            p{
+                font-size: 35px;
+                width: 55vw;
+            }       
+        }
+    }
 
 .contact_info{
     width: 90%;

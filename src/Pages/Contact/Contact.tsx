@@ -54,7 +54,7 @@ const Contact = () => {
 
 
   return (
-    <Layout>
+    <Layout className='contact'>
       <div className='title_container'> <p className='title'>{t("Contact Us")}</p></div>
 
       <div className='contact_info'>
