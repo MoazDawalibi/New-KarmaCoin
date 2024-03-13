@@ -12,6 +12,7 @@ import { useDispatch } from 'react-redux';
 import { register } from '../../Redux/auth/AuthReducer';
 import Layout from '../../Layout/Ui/Layout';
 import { MdKeyboardDoubleArrowRight } from 'react-icons/md'
+import { LoadingButton } from '../../Components/Utils/Loading/LoadingButton';
 
 const Virefied = () => {
   
@@ -74,7 +75,7 @@ const Virefied = () => {
             <span onClick={handleSendCode}>{t("Resend Code")}</span>
           </div>
         }
-        children={<div className='button_container'><button className='verify_button' onClick={handleSubmit}>{t("Submit")}<MdKeyboardDoubleArrowRight/></button></div>}
+        children={<div className='button_container'><LoadingButton  isLoading={isLoading} onClick={handleSubmit}>{t("Submit")}<MdKeyboardDoubleArrowRight/></LoadingButton></div>}
         />
       </div>
     </Layout>
