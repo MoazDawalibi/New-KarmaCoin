@@ -11,8 +11,11 @@
         }
         :where(.css-dev-only-do-not-override-i1mju1).ant-radio-wrapper span.ant-radio+*{
             font-size: 20px;
-            color: var(--fifthly);
+            color: var(--fifthly) !important;
         }   
+        :where(.css-y8x9xp).ant-radio-wrapper {
+         color: var(--fifthly) !important;
+        }
     }
 }
 
