@@ -72,7 +72,25 @@ svg {
         }
     }
 }
-
+.themeMode{
+    background: #000 !important;
+    margin-inline: 10px;
+}
+.ProductPagination{
+    .anticon svg{
+        color: var(--fifthly) !important;
+    
+    }
+}
+a:not([href]):not([class]), a:not([href]):not([class]):hover, a:not(:first-child) {
+color: var(--fifthly);
+}
+.anticon > {
+    color: var(--fifthly);
+}
+:where(.css-dev-only-do-not-override-i1mju1)[class^="ant-pagination"] [class^="ant-pagination"], :where(.css-dev-only-do-not-override-i1mju1)[class*=" ant-pagination"] [class^="ant-pagination"], :where(.css-dev-only-do-not-override-i1mju1)[class^="ant-pagination"] [class*=" ant-pagination"], :where(.css-dev-only-do-not-override-i1mju1)[class*=" ant-pagination"] [class*=" ant-pagination"]{
+    color: var(--fifthly);
+}
 .point_container{
     .point{
         display: none !important;

@@ -25,9 +25,48 @@
     padding: 0 10px;
     
 }
-
+:where(.css-dev-only-do-not-override-i1mju1).ant-btn.ant-btn-circle {
+    background: inherit;
+    color: var(--blacktowhite);
+}
 :where(.css-dev-only-do-not-override-i1mju1).ant-radio-wrapper .ant-radio-input{
     background: var(--primary) !important;
+}
+
+:where(.css-dev-only-do-not-override-i1mju1).ant-steps .ant-steps-item-finish>.ant-steps-item-container>.ant-steps-item-content>.ant-steps-item-title::after  ,:where(.css-dev-only-do-not-override-i1mju1).ant-steps .ant-steps-item-process .ant-steps-item-icon{
+    background-color: var(--seven);
+    border-color:var(--seven) ;
+}
+:where(.css-dev-only-do-not-override-i1mju1).ant-btn-primary:not(:disabled):not(.ant-btn-disabled) {
+    background: var(--fifthly) !important;
+}
+
+:where(.css-dev-only-do-not-override-i1mju1).ant-steps .ant-steps-item-finish>.ant-steps-item-container>.ant-steps-item-content>.ant-steps-item-title 
+{
+    color: var(--fifthly) !important;
+}
+:where(.css-dev-only-do-not-override-i1mju1).ant-steps .ant-steps-item-process>.ant-steps-item-container>.ant-steps-item-content>.ant-steps-item-title,  :where(.css-dev-only-do-not-override-i1mju1).ant-steps .ant-steps-item-process>.ant-steps-item-container>.ant-steps-item-content>.ant-steps-item-description {
+    color: var(--fifthly) ;
+}
+:where(.css-dev-only-do-not-override-i1mju1).ant-steps .ant-steps-item:not(.ant-steps-item-active)>.ant-steps-item-container[role='button']:hover .ant-steps-item-title, :where(.css-dev-only-do-not-override-i1mju1).ant-steps .ant-steps-item:not(.ant-steps-item-active)>.ant-steps-item-container[role='button']:hover .ant-steps-item-subtitle, :where(.css-dev-only-do-not-override-i1mju1).ant-steps .ant-steps-item:not(.ant-steps-item-active)>.ant-steps-item-container[role='button'] .ant-steps-item-description{
+    // display: none !important;
+    color: var(--blacktowhite);
+}
+:where(.css-dev-only-do-not-override-i1mju1).ant-steps .ant-steps-item-wait>.ant-steps-item-container>.ant-steps-item-content>.ant-steps-item-title 
+{
+    color: var(--eight);
+    &:hover{
+        color: var(--eight) !important;
+    }
+}
+:where(.css-dev-only-do-not-override-i1mju1).ant-steps .ant-steps-item-wait>.ant-steps-item-container>.ant-steps-item-content>.ant-steps-item-description{
+    color:var(--eight);
+    &:hover{
+        color: var(--eight) !important;
+    }
+}
+:where(.css-dev-only-do-not-override-i1mju1).ant-steps .ant-steps-item-finish>.ant-steps-item-container>.ant-steps-item-tail::after{
+    background-color: var(--seven);
 }
 .Buttons_Tr{
     display: flex;justify-content: space-between;
@@ -59,6 +98,7 @@
 
 .CartBody .CartBody_Right button{
     width: 20% !important;
+    background: var(--thirdly) !important;
 }
 .CartBody{
    display: flex; 
@@ -78,14 +118,16 @@
         margin-bottom: 30px;
     }
     .CartBody_Right{
+        margin-inline: auto;
         flex: 40%;
         background-color:var(--bg);
+        border: 1px solid var(--border);
         color:var(--text);
         border-radius: 8px;
         @include Shadow;
         display: flex;
         flex-direction: column;
-        width: 100%;
+        width: 96%;
         gap: 5px;
         position: sticky;
         right: 10px;
@@ -113,6 +155,10 @@
 .CartItem{
     width: 100%;
     padding: 20px;
+    .ant-card-body{
+        background: var(--whiteandblack);
+        border-radius: 10px;
+    }
     .checked_quantity{
         .Checked_icon{
             border-radius: 5px;
@@ -138,20 +184,25 @@
       } 
       .Cart_Info{
         text-align: start;
+        color: var(--fifthly);
         span{
             h6{
+                color: var(--fifthly);
                 margin-bottom: 0 !important;
             }
+        }
+        strong{
+            color: var(--fifthly);
         }
       }
       .Cart_Counter{
         display: flex;align-items: flex-start; justify-content: center; gap: 1px;
         svg{
-            color: var(--primary);
+            color: var(--fifthly);
+
         }
         .Counter{
             width: 20px;
-
         }
         button{
             width: 10px;
@@ -172,6 +223,8 @@
     gap: 2vw;
     margin-inline: auto;
     max-width:900px;
+    margin-block: 30px;
+
     .DetailsBody_Left{
         flex: 60%;
         display: flex; 
@@ -185,6 +238,7 @@
             color: var(--bg);
         }
       .Address{
+        border: 1px solid var(--border);
         padding: 40px;
         width: 100%;
         @include Shadow;
@@ -254,6 +308,8 @@
     margin-block: 50px;
     margin-inline: auto;
     .PaymentBody_Left{
+        border-radius: 8px;
+        border: 1px solid var(--border);
         flex: 60%;
         display: flex; 
         flex-direction: column;
@@ -359,8 +415,11 @@
 
 /* Ant steps item title */
 .ant-steps-label-horizontal .ant-steps-item .ant-steps-item-title{
- color:var(--primary) !important;
+ color: var(--fifthly) !important;
  font-weight: bold;
+}
+:where(.css-dev-only-do-not-override-i1mju1).ant-steps .ant-steps-item-wait .ant-steps-item-icon{
+    background: var(--bg5);
 }
 
 /* Ant steps item description */
@@ -386,6 +445,7 @@
     .EmptyCart_text, .Empty_icon{
         text-align: center;
         font-size: 50px;
+        color: var(--blacktowhite);
         span{
             color: red;
         }
@@ -659,7 +719,7 @@
         display: none;
         .Adress_butttons{
             .Payment_Button, .BackToCart_Button{
-                font-size: 7px !important;
+                font-size: 9px !important;
             }
         }
     }

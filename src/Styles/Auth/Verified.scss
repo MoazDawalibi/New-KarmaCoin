@@ -5,6 +5,7 @@
     flex-direction: column;
     height: 100vh;
     width: 100%;
+    background: var(--bg);
     .ant-btn {
         &:hover{
             background: #fafafa !important;
@@ -23,6 +24,7 @@
         opacity: .4;
         font-weight: bold;
         cursor: pointer;
+        color: var(--blacktowhite);
     }
     .button_container{
         width: 100%;
@@ -30,13 +32,13 @@
         .loadingBUtton{
             width: 135px;
             height: 50px;
-            border: 2px solid #fff;
+            border: 2px solid var(--whiteandblack);
             border-radius: 10px;
-            background: var(--primary) !important;
+            background: var(--thirdly) !important;
             text-align: center;
             .loadingspan{
                 opacity: 1 !important;
-                color: #fff !important;
+                color: var(--whiteandblack) !important;
                 font-size: 20px;
             }
             &:hover{
@@ -86,6 +88,9 @@
  opacity: .7;
 }
 
+:where(.css-dev-only-do-not-override-i1mju1).ant-result .ant-result-title,:where(.css-dev-only-do-not-override-i1mju1).ant-result .ant-result-subtitle{
+    color: var(--blacktowhite);
+}
 @media screen and (max-width:850px) {
     .ReviewBody{
         margin-block: 89px;

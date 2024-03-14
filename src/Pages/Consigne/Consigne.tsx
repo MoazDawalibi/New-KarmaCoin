@@ -75,19 +75,19 @@ const Consigne = () => {
             <p>{t("Write your messages")}</p>
             <Form className='form' ref={form} onSubmit={handelSubmit}>
               <Form.Group controlId="formName">
-                <Form.Label>{t('Coin Name')}</Form.Label>
+                <Form.Label className='form_label' >{t('Coin Name')}</Form.Label>
                 <Form.Control className='consign_input' type="text" name="to_name" placeholder={t('enter Coin Name')} value={Name} onChange={(e)=>setName(e.target.value)}/>
               </Form.Group>
               <Form.Group controlId="formDesc">
-                <Form.Label>{t('Coin Description')}</Form.Label>
+                <Form.Label className='form_label'>{t('Coin Description')}</Form.Label>
                 <Form.Control className='consign_input' type="text" name="description" placeholder={t('enter Coin description')} value={Description} onChange={(e)=>setDescription(e.target.value)}/>
               </Form.Group>
               <Form.Group controlId="formPrice">
-                <Form.Label>{t('Coin Price')}</Form.Label>
+                <Form.Label className='form_label'>{t('Coin Price')}</Form.Label>
                 <Form.Control className='consign_input' type="number" name="price" placeholder={t('enter coin price')} value={Price} onChange={(e)=>setPrice(e.target.value)} />
               </Form.Group>
               <Form.Group controlId="formMessage">
-                <Form.Label>{t('Your Message')}</Form.Label>
+                <Form.Label className='form_label'>{t('Your Message')}</Form.Label>
                 <Form.Control className='consign_input' as="textarea" rows={4} name="note" placeholder={t('type Your Message')} value={Message} onChange={(e)=>setMessage(e.target.value)}/>
               </Form.Group>
 

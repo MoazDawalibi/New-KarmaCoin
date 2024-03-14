@@ -4,13 +4,13 @@
     margin-inline: auto;
     margin-block: 40px;
     h1, p, .link{
-        color: var(--primary);
+        color: var(--thirdly);
         text-align: center !important;
     }
     h1{
         font-size: 50px;
         font-weight: normal;
-        border-bottom:1px solid var(--primary);
+        border-bottom:1px solid var(--thirdly);
         margin-bottom: 20px;
     }
     p{
@@ -22,7 +22,7 @@
     .link{
         font-weight: normal;
          font-size: 20px;
-         border-bottom: 2px solid  var(--primary);
+         border-bottom: 2px solid  var(--thirdly);
     }
 }
 

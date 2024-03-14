@@ -160,7 +160,7 @@
          left: 0;
          background-color: var(--secondary);
          padding: 3px 10px;
-         color: var(--bg);
+         color: var(--sixthly);
          border-radius: 3px;
          cursor: pointer;
          font-size: 12px;
@@ -176,8 +176,10 @@
          flex-direction: column;
          gap: 10px;
          svg{
+            // color: var(--sixthly);
             &:hover{
-               opacity: 1;
+               // opacity: 1;
+               
             }
          }
        }
@@ -377,7 +379,6 @@
                   flex-direction: column;
                   gap: 10px;
                   svg{
-                     opacity: 0;
                      &:hover{
                         opacity: 1;
                      }

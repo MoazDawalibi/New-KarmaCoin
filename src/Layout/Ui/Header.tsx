@@ -15,6 +15,7 @@ import { useLogin } from '../../api/auth';
 import { login } from '../../Redux/auth/AuthReducer'
 import { useGetCart } from '../../api/cart';
 import { toast } from 'react-toastify';
+import Theme from '../../Components/Utils/Theme';
 
 const Header = (handleRegisterClick: any) => {
 
@@ -113,6 +114,7 @@ const Header = (handleRegisterClick: any) => {
             }
           </div>
           <Translate />
+          <span className='themeMode'><Theme /></span>
         </div>
 
         <div className='bottomLinks'>
@@ -167,7 +169,10 @@ const Header = (handleRegisterClick: any) => {
                 }
               </span>
             </div>
-            <Translate />
+            <span>
+              <Translate />
+              <span className='themeMode'><Theme /></span>
+            </span>
           </div>
 
           <Divider className='divider' />

@@ -33,9 +33,13 @@
                 color: var(--secondary);
                 border-left: none;
                 border-right:2px solid var(--secondary) ;
+                .anticon .anticon-shopping-cart{
+                    color: var(--secondary) !important;
+                }
                 &:hover{
                     color: #fff;
                 }
+
             }
             .link2{
                 cursor: pointer;
@@ -111,7 +115,7 @@
                 font-size: 1.2vw;
                 text-align: center;
                 padding-inline: 1vw;
-                height: 2vw;
+                height: 2.2vw;
                 font-weight: normal;
                 color: var(--secondary);
                 border-left: 2px solid var(--secondary);
@@ -123,6 +127,13 @@
                 cursor: pointer;
                 margin-right: 1vw;
                 border-right: 2px solid var(--secondary);    
+            }
+            .themeMode{
+                background: #000 !important;
+                margin-inline: 10px;
+            }
+            .MenuChange{
+                color: var(--whiteandblack) !important;
             }
             .ant-btn {
                 background: var(--bg3);
@@ -394,28 +405,32 @@ padding: 0 24px;
 
 
 :where(.css-dev-only-do-not-override-i1mju1).ant-modal .ant-modal-content {
-    background: hsl(212.73deg 29.73% 92.75%) !important;
+    background: var(--bg4) !important;
 
 }
 .ant-modal-content {
-    background: hsl(212.73deg 29.73% 92.75%) !important;
-
+    // background: hsl(212.73deg 29.73% 92.75%) !important;
+    background: var(--bg4) !important;
 }
 
 .ant-modal-content{
     padding : 20px;
     background: hsl(212.73deg 29.73% 92.75%) !important;
+    background: var(--bg4) !important;
+
 }
 
 .LoginModel{
     background: hsl(212.73deg 29.73% 92.75%);
+    background: var(--bg4) !important;
+
     display: flex;
     align-items: flex-start;
     min-height: 280px;
     gap: 10px;
     h1{
         margin-bottom: 20px;
-        color:  hsl(214.44deg 49.09% 21.57%);
+        color:  var(--thirdly);
         font-size: 28px;
     }
 
@@ -435,9 +450,10 @@ padding: 0 24px;
                 @include Shadow;  
                 label{
                     font-weight: bolder;
+                    color:  var(--thirdly);
                 }  
                 .input{
-                padding: 12px;
+                    padding: 12px;
                     background: white;
                     width: 100%;
                     outline: none;
@@ -449,17 +465,19 @@ padding: 0 24px;
                 width: 120px;
                 padding: 10px;
                 align-self: flex-end;
-                background: hsl(214.44deg 49.09% 21.57%);
+                background: var(--thirdly);
+                color: var(--whiteandblack);
                 outline: none;
                 border: none;
-                color: white;
                 font-weight: bold;
             }
         }
         
     }
     .LoginModel_Right{
-        background: hsl(215.29deg 23.29% 85.69%);
+        // background: hsl(215.29deg 23.29% 85.69%);
+        background: #000;
+        // background: var(--primary);
         padding: 20px 15px;
         max-width: 30%;
         margin-inline: auto;
@@ -467,11 +485,11 @@ padding: 0 24px;
         align-self: flex-end;
         flex: 35%;
         h6{
-                color:  hsl(214.44deg 49.09% 21.57%);
-                font-size: 12px;
+            color: var(--thirdly);
+            font-size: 12px;
         }
         p{
-            color:hsl(216deg 13.39% 43.92%);
+            color:#616d7f;
             font-size: 10px;
         }
         button{
@@ -479,17 +497,19 @@ padding: 0 24px;
             font-size: 12px;
             padding: 4px;
             align-self: flex-end;
-            background: hsl(214.44deg 49.09% 21.57%);
+            background: var(--thirdly);
+            color: var(--whiteandblack);
             outline: none;
             border: none;
-            color: white;
             font-weight: bold;
 
         }
 }
 
 }
-
+:where(.css-dev-only-do-not-override-i1mju1).ant-modal .ant-modal-close-x{
+    color: var(--fifthly);
+}
 
 
 @media screen and (max-width: 950px) {
@@ -498,7 +518,6 @@ padding: 0 24px;
     
     }
     .LoginModel{
-        background: hsl(212.73deg 29.73% 92.75%);
         display: flex;
         align-items: flex-start;
         min-height: 320px;
@@ -507,7 +526,6 @@ padding: 0 24px;
         h1{
             text-wrap: wrap;
             margin-bottom: 40px;
-            color:  hsl(214.44deg 49.09% 21.57%);
         }
         .LoginModel_Left{
             display: flex;
@@ -521,7 +539,6 @@ padding: 0 24px;
                 gap: 30px;
                     .input{
                         padding: 12px;
-                        background: white;
                         @include Shadow;    
                         outline: none;
                         border: none;
@@ -533,7 +550,6 @@ padding: 0 24px;
                     padding: 10px;
                     flex: 10%;
                     align-self: flex-start;
-                    background: hsl(214.44deg 49.09% 21.57%);
                     outline: none;
                     border: none;
                     color: white;
@@ -547,7 +563,6 @@ padding: 0 24px;
     
         }
         .LoginModel_Right{
-            background: hsl(215.29deg 23.29% 85.69%);
             padding: 20px;
             max-width: 100%;
             margin-inline: auto;
@@ -556,11 +571,9 @@ padding: 0 24px;
             margin-top: 20px;
     
             h6{
-                    color:  hsl(214.44deg 49.09% 21.57%);
     
             }
             p{
-                color:hsl(216deg 13.39% 43.92%);
                 font-size: 13px;
     
             }
@@ -568,7 +581,6 @@ padding: 0 24px;
                 width: 120px;
                 padding: 10px;
                 align-self: flex-start !important;
-                background: hsl(214.44deg 49.09% 21.57%);
                 outline: none;
                 border: none;
                 color: white;

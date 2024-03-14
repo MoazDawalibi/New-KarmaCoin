@@ -38,15 +38,14 @@ import OrderStatus from '../../Components/Ui/Order/OrderStatus';
     return (
       <Layout>
         <section
-          className="h-100 gradient-custom"
-          style={{ backgroundColor: "#eee" }}
+          className="h-100 gradient-custom singleOrder_page"
         >
           <MDBContainer className="py-5 h-100">
             <MDBRow className="justify-content-center align-items-center h-100">
               <MDBCol lg="10" xl="8">
                 <MDBCard style={{ borderRadius: "10px" }}>
-                  <MDBCardHeader className="px-4 py-5">
-                    <MDBTypography tag="h5" className="text-muted mb-0">
+                  <MDBCardHeader className="px-4 py-5 header">
+                    <MDBTypography tag="h5" className="text-muted mb-0 Title">
                       {t("Thanks for your Order")},{" "}
                       <span  className=''>{user?.name}</span>!
                     </MDBTypography>
@@ -54,14 +53,14 @@ import OrderStatus from '../../Components/Ui/Order/OrderStatus';
                    <OrderStatus  order_status={order?.order_status}/>
                     </MDBTypography>
                   </MDBCardHeader>
-                  <MDBCardBody className="p-4">
+                  <MDBCardBody className="p-4 order_body">
                     <div className="d-flex justify-content-between align-items-center mb-4">
                       <p
-                        className="lead fw-normal mb-0 "
+                        className="lead fw-normal mb-0 body_title"
                       >
                         {t("Receipt")}
                       </p>
-                      <p className="small text-muted mb-0">
+                      <p className="small text-muted mb-0 SingleOrderInfoFont">
                         {t("Order Code")}  : {order?.order_code}
                       </p>
                     </div>
@@ -115,7 +114,7 @@ import OrderStatus from '../../Components/Ui/Order/OrderStatus';
                   }
 
                     <div className="SingleOrderInfo d-flex justify-content-between pt-2 ">
-                      <p className="SingleOrderInfoFont fw-bold mb-0">{t("Order Details")}</p>
+                      <p className="SingleOrderInfoFont body_title fw-bold mb-0">{t("Order Details")}</p>
                       <p className="SingleOrderInfoFont text-muted mb-0">
                         <span className="fw-bold me-4">{t("Total")}</span> {order?.order_total} {Currency}
                       </p>

@@ -89,15 +89,15 @@ const Contact = () => {
         <div>
           <Form ref={form} onSubmit={sendEmail}>
             <Form.Group controlId="formName">
-              <Form.Label>{t('contactUs.name')}</Form.Label>
+              <Form.Label className='form_label'>{t('contactUs.name')}</Form.Label>
               <Form.Control className='contact_input' type="text" name="to_name" placeholder={t('contactUs.enterYourName')} value={Name} onChange={(e)=>setName(e.target.value)} />
             </Form.Group>
             <Form.Group controlId="formEmail">
-              <Form.Label>{t('contactUs.email')}</Form.Label>
+              <Form.Label className='form_label' >{t('contactUs.email')}</Form.Label>
               <Form.Control className='contact_input' type="email" name="from_name" placeholder={t('contactUs.enterYourEmail')} value={Email} onChange={(e)=>setEmail(e.target.value)}/>
             </Form.Group>
             <Form.Group controlId="formMessage">
-              <Form.Label>{t('contactUs.message')}</Form.Label>
+              <Form.Label className='form_label' >{t('contactUs.message')}</Form.Label>
               <Form.Control className='contact_input' as="textarea" rows={4} name="message" placeholder={t('contactUs.typeYourMessage')}value={Message} onChange={(e)=>setMessage(e.target.value)} />
             </Form.Group>
             <div className='button_container'>

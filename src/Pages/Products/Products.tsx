@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import ProductsHeader from './ProductsHeader';
 import ProductsFilter from './ProductsFilter';
 import ProductsCards from './ProductsCards';
 import { useGetAllProductWithPaginations } from '../../api/Product';
@@ -14,6 +15,7 @@ const Products = () => {
 
   return (
     <Layout className='Products'>
+      <ProductsHeader {...Props} />
       <div className='Products_Body'>
         <ProductsFilter />
         {isLoading ? <LoadingPage/>  :   <ProductsCards {...Props} /> }

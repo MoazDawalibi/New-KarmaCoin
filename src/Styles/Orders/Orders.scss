@@ -2,16 +2,16 @@
     width: 100%;
         .title_container{
             width: 100%;
-            background: #e7ecf2;
+            background: var(--bg2);
             padding-block: 60px;
             @include Flex;
             h1{
                 font-size: 50px;
-                border-bottom: 1px solid var(--primary);
+                border-bottom: 1px solid var(--thirdly);
                 font-weight: normal;
                 text-align: center;
                 width: 15vw;
-                color: var(--primary);
+                color: var(--thirdly);
             }
         }
     .form{
@@ -25,13 +25,25 @@
         padding: 10px;
         @include Flex;
         margin-block: 10px;
-        color: var(--primary);
+        color: var(--thirdly);
     }
     :where(.css-dev-only-do-not-override-1adbn6x).ant-table-wrapper .ant-table-pagination-right{
         justify-content: center !important;
     }
 }
-
+:where(.css-dev-only-do-not-override-i1mju1).ant-table-wrapper .ant-table-cell, :where(.css-dev-only-do-not-override-i1mju1).ant-table-wrapper .ant-table-thead>tr>th, :where(.css-dev-only-do-not-override-i1mju1).ant-table-wrapper .ant-table-tbody>tr>th, :where(.css-dev-only-do-not-override-i1mju1).ant-table-wrapper .ant-table-tbody>tr>td, :where(.css-dev-only-do-not-override-i1mju1).ant-table-wrapper tfoot>tr>th, :where(.css-dev-only-do-not-override-i1mju1).ant-table-wrapper tfoot>tr>td{
+    background: var(--whiteandblack);
+}
+:where(.css-dev-only-do-not-override-i1mju1).ant-table-wrapper .ant-table-thead >tr>th, :where(.css-dev-only-do-not-override-i1mju1).ant-table-wrapper .ant-table-thead >tr>td{
+    color: var(--blacktowhite);
+}
+:where(.css-dev-only-do-not-override-i1mju1).ant-table-wrapper .ant-table-cell, :where(.css-dev-only-do-not-override-i1mju1).ant-table-wrapper .ant-table-thead>tr>th, :where(.css-dev-only-do-not-override-i1mju1).ant-table-wrapper .ant-table-tbody>tr>th, :where(.css-dev-only-do-not-override-i1mju1).ant-table-wrapper .ant-table-tbody>tr>td, :where(.css-dev-only-do-not-override-i1mju1).ant-table-wrapper tfoot>tr>th, :where(.css-dev-only-do-not-override-i1mju1).ant-table-wrapper tfoot>tr>td
+{
+    color: var(--blacktowhite);
+}
+:where(.css-dev-only-do-not-override-i1mju1).ant-table-wrapper .ant-table-tbody .ant-table-row >.ant-table-cell-row-hover{
+    background: var(--whiteandblack);
+}
 
 @media screen and (max-width: 650px) {
     .Orders{
@@ -110,5 +122,45 @@
         .SingleOrderInfoFont{
             font-size: 11px !important;
         }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.singleOrder_page{
+    background: var(--bg) !important;
+    .header{
+        background: var(--whiteandblack);
+        border-radius: 9px 9px 0 0 ;
+        .Title{
+            color: var(--border) !important; 
+        }
+    }
+    .SingleOrderInfoFont{
+        color: var(--border2) !important; 
+    }
+    .body_title{
+        color: var(--border) !important;
+    }
+    .order_body{
+        border: 1px solid var(--white);
+        background: var(--whiteandblack);
     }
 }

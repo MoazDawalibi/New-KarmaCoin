@@ -1,21 +1,24 @@
 .contact_us{
     .title_container{
             width: 100%;
-            background: #e7ecf2;
+            background: var(--bg2);
             padding-block: 60px;
             @include Flex;
         
         p{
             font-size: 50px;
-            border-bottom: 1px solid var(--primary);
+            border-bottom: 1px solid var(--thirdly);
             font-weight: normal;
             text-align: center;
             width: 25vw;
-            color: var(--primary);
+            color: var(--thirdly);
         }       
     }
 }
+.form_label{
+    color: var(--fifthly);
 
+}
 .contact_info{
     display: flex;
     flex-direction: column;
@@ -26,6 +29,7 @@
         margin-block: 70px;
         font-size: 30px;
         font-weight: bold;
+        color: var(--fifthly);
     }
     .info_container{
         display: flex; justify-content: space-between;align-items: start;
@@ -36,14 +40,16 @@
                 width: 100%;
                 font-size: 20px;
                 font-weight: bold;
+                color: var(--fifthly);
             }
             p{
                 display: flex;justify-content: start;align-items: center;
                 width: 100%;
                 font-size: 25px;
                 text-transform: capitalize;
-                // line-height: 30px;
+                color: var(--fifthly);
                 svg{
+                    color: var(--fifthly);
                     padding-right:10px ;
                     font-size: 30px;
                 }
@@ -52,7 +58,7 @@
     }
 }
 .contact_divider{
-    background: var(--primary) !important;
+    background: var(--thirdly) !important;
     width: 84% !important;
     min-width: 84% !important;
     margin-inline: auto;
@@ -70,8 +76,8 @@
         display: flex;justify-content: end;align-items: end;
     }
     button {
-        background-color: var(--primary) !important;
-        color: var(--white);
+        background-color: var(--thirdly) !important;
+        color: var(--whiteandblack);
         font-weight: bold;
         outline: none;
         border: none;
@@ -83,15 +89,17 @@
         .contact_input{
             border-radius: 1px;
             color: #000;
-            border-bottom: 3px solid #75879e80;
+            border-bottom: 3px solid var(--border);
             font-size: 20px;
-            // opacity: .4;
+            
         }
         h1 {
+            color: var(--fifthly);
             font-size: 4.5vw;
         }
 
         p {
+            color: var(--fifthly);
             font-size: 1.4vw;
         }
 
@@ -99,8 +107,7 @@
     }
 
     button {
-        background-color: var(--secondary);
-        color: var(--white);
+        color: var(--whiteandblack);
     }
 
     .ContactImage {
@@ -185,8 +192,6 @@
         display: flex;justify-content: end;align-items: end;
     }
     button {
-        background-color: var(--primary) !important;
-        color: var(--white);
         font-weight: bold;
         outline: none;
         border: none;
@@ -208,11 +213,6 @@
             font-size: 1.4vw;
         }
         width: 50%;
-    }
-
-    button {
-        background-color: var(--secondary);
-        color: var(--white);
     }
     .ContactImage {
         width: 30vw;

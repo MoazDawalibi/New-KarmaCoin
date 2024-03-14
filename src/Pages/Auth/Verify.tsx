@@ -6,7 +6,6 @@ import { useSendCode, useVerify } from '../../api/auth';
 import { useTranslation } from 'react-i18next';
 import ReactCodeInput from 'react-verification-code-input';
 import { toast } from 'react-toastify';
-import Translate from '../../Components/Utils/Translate';
 import { USER_EMAIL } from '../../config/AppKey';
 import { useDispatch } from 'react-redux';
 import { register } from '../../Redux/auth/AuthReducer';
@@ -56,7 +55,6 @@ const Virefied = () => {
   return (
     <Layout>
       <div className='Virefied'>
-      <Translate/>
         <Result
         className='Result'
         status="404"

@@ -18,6 +18,7 @@
       svg{
          padding: 0;
          font-size: 3.5vw;
+         color: var(--thirdly);
       }
    }
    .ar{
@@ -95,11 +96,11 @@
          width: 100%;
          display: flex; justify-content: space-between; align-items: end;
          .AddProduct{
-            border: 1px solid var(--primary);
+            border: 1px solid var(--thirdly);
             margin-bottom: -3px;
             height:  28px; width:  28px; @include Flex;
             svg{
-               color: var(--primary);
+               color: var(--thirdly);
                font-size: 15px;
             }
          }
@@ -169,11 +170,11 @@
       >span{
          display: flex; justify-content: space-between; align-items: center;
          .AddProduct{
-            border: 1px solid var(--primary);
+            border: 1px solid var(--thirdly);
             border-radius: 10%;
             height: 25px; width: 25px; @include Flex;
             svg{
-               color: var(--primary);
+               color: var(--thirdly);
             }
          }
       }
@@ -186,11 +187,11 @@
    position: absolute;
    bottom: 20px;
    right: 20px;
-   border: 1px solid var(--primary);
+   border: 1px solid var(--thirdly);
    border-radius: 10%;
    height: 25px; width: 25px; @include Flex;
    svg{
-      color: var(--primary);
+      color: var(--thirdly);
    }
 }
 }
@@ -255,10 +256,10 @@
             display: flex;justify-content: space-between;align-items: end;
 
             .AddProduct{
-               border: 1px solid var(--primary);
+               border: 1px solid var(--thirdly);
                height: 19px; width: 19px; @include Flex;
                svg{
-                  color: var(--primary);
+                  color: var(--thirdly);
                   font-size: 10px;
                }
             }
