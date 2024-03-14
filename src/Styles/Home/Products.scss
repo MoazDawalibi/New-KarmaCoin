@@ -2,13 +2,16 @@
     .showfillter{
         .ProductsFilter_header{
             font-size: 30px;
+            color: var(--fifthly);
         }
         .ProductsFilter_Text{
             margin-block: 20px;
             font-size: 20px;
+            color: var(--fifthly);
         }
         :where(.css-dev-only-do-not-override-i1mju1).ant-radio-wrapper span.ant-radio+*{
             font-size: 20px;
+            color: var(--fifthly);
         }   
     }
 }
